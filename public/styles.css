@@ -1358,7 +1358,7 @@ body {
 
 /* Camera Scanner Body */
 .scanner-body {
-  padding: 18px 20px;
+  padding: 14px 18px 18px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1366,13 +1366,22 @@ body {
 
 .camera-viewport {
   width: 100%;
-  min-height: 250px;
+  height: 230px;
+  max-height: 230px;
   background-color: #0d131a;
   border-radius: var(--radius-md);
   overflow: hidden;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.camera-viewport video {
+  width: 100% !important;
+  height: 230px !important;
+  max-height: 230px !important;
+  object-fit: cover !important;
 }
 
 .scanner-status {

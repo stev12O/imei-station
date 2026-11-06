@@ -278,27 +278,14 @@
 
       <div class="scanner-body">
         <div id="cameraReader" class="camera-viewport"></div>
-        <div id="scannerStatus" class="scanner-status">Iniciando cámara...</div>
-
-        <!-- Selector rápido de Lentes (guarda automáticamente el lente favorito) -->
-        <div id="lensSelectorRow" class="scanner-pill-row" hidden></div>
-
-        <!-- Controles de Zoom (1x / 1.5x / 2x / 3x) + Linterna para enfoque de cerca -->
-        <div id="zoomControlsRow" class="scanner-pill-row" hidden>
-          <span class="scanner-row-label">Zoom enfoque:</span>
-          <button type="button" class="zoom-chip active" data-zoom="1">1x</button>
-          <button type="button" class="zoom-chip" data-zoom="1.5">1.5x</button>
-          <button type="button" class="zoom-chip" data-zoom="2">2x</button>
-          <button type="button" class="zoom-chip" data-zoom="3">3x</button>
-          <button type="button" id="torchBtn" class="zoom-chip" hidden>🔦 Linterna</button>
-        </div>
+        <div id="scannerStatus" class="scanner-status" hidden></div>
 
         <div class="scanner-controls">
-          <button type="button" id="switchCameraBtn" class="secondary-btn">
-            Cambiar Lente
+          <button type="button" id="torchBtn" class="secondary-btn" hidden>
+            🔦 Linterna
           </button>
           <label for="photoScanInput" class="secondary-btn file-label-btn">
-            Subir / Tomar Foto Nítida
+            Tomar / Subir Foto
             <input type="file" id="photoScanInput" accept="image/*" capture="environment" hidden />
           </label>
         </div>

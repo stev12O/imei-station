@@ -91,10 +91,7 @@
   const scannerModal = document.getElementById('scannerModal');
   const closeScannerBtn = document.getElementById('closeScannerBtn');
   const scannerStatus = document.getElementById('scannerStatus');
-  const switchCameraBtn = document.getElementById('switchCameraBtn');
   const photoScanInput = document.getElementById('photoScanInput');
-  const lensSelectorRow = document.getElementById('lensSelectorRow');
-  const zoomControlsRow = document.getElementById('zoomControlsRow');
   const torchBtn = document.getElementById('torchBtn');
   let torchEnabled = false;
 
@@ -600,78 +597,37 @@
     return null;
   }
 
-  function chooseBestDefaultCameraIndex(cameras) {
-    // 1. Check if the user already selected a favorite lens on this phone
-    try {
-      const savedId = localStorage.getItem('imei_preferred_camera');
-      if (savedId) {
-        const savedIdx = cameras.findIndex((c) => c.id === savedId);
-        if (savedIdx >= 0) return savedIdx;
-      }
-    } catch {}
-
-    // 2. Filter rear cameras
-    const backIndices = [];
-    cameras.forEach((c, idx) => {
-      if (/back|trasera|posterior|environment|rear/i.test(c.label)) {
-        backIndices.push(idx);
-      }
-    });
-
-    if (backIndices.length === 0) return cameras.length - 1;
-
-    // 3. Avoid Ultra-Wide (0.5x) / Telephoto / Macro / Depth sensors if main camera is available
-    const mainBack = backIndices.filter((idx) => {
-      const lbl = cameras[idx].label.toLowerCase();
-      return !/(ultra|wide-angle|gran angular|0\.5|tele|depth|macro)/i.test(lbl);
-    });
-
-    if (mainBack.length > 0) {
-      // On many Android/Samsung devices, camera2 0 (the first mainBack or last mainBack) is primary;
-      // on iOS, "Back Camera" / "Cámara trasera" is primary.
-      const exactMain = mainBack.find((idx) => /^(back camera|cámara trasera|camera2 0, facing back)$/i.test(cameras[idx].label.trim()));
-      if (exactMain !== undefined) return exactMain;
-      return mainBack[0];
+  function pickAutomaticBestCamera(cameras) {
+    if (!Array.isArray(cameras) || cameras.length === 0) {
+      return { facingMode: 'environment' };
     }
 
-    return backIndices[0];
-  }
-
-  function renderLensSelectorPills() {
-    if (!camerasList || camerasList.length <= 1) {
-      lensSelectorRow.hidden = true;
-      return;
+    // Filter rear cameras
+    const backCams = cameras.filter((c) => /back|trasera|posterior|environment|rear/i.test(c.label));
+    if (backCams.length === 0) {
+      return { facingMode: 'environment' };
     }
-    lensSelectorRow.hidden = false;
-    lensSelectorRow.innerHTML = '<span class="scanner-row-label">Lente (se guarda automático):</span>';
 
-    let savedId = null;
-    try {
-      savedId = localStorage.getItem('imei_preferred_camera');
-    } catch {}
+    // 1. On iPhone Pro / multi-lens iOS, "Back Triple Camera" / "Cámara triple trasera" / "Back Dual Wide Camera"
+    // is the virtual fusion camera that automatically switches to macro/autofocus when close!
+    const appleFusion = backCams.find((c) =>
+      /(triple|dual wide|dual amplia|fusion)/i.test(c.label)
+    );
+    if (appleFusion) return appleFusion.id;
 
-    camerasList.forEach((cam, idx) => {
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = `lens-chip${idx === currentCameraIdx ? ' active' : ''}`;
-      const isBack = /back|trasera|environment|rear/i.test(cam.label);
-      const shortName = isBack ? `Trasera ${idx + 1}` : `Cámara ${idx + 1}`;
-      const star = cam.id === savedId ? ' ★' : '';
-      btn.textContent = `${shortName}${star}`;
-      btn.title = cam.label || shortName;
-      btn.addEventListener('click', async () => {
-        currentCameraIdx = idx;
-        try {
-          localStorage.setItem('imei_preferred_camera', cam.id);
-        } catch {}
-        renderLensSelectorPills();
-        await startCameraStream(cam.id);
-      });
-      lensSelectorRow.appendChild(btn);
-    });
+    // 2. Otherwise avoid dedicated ultra-wide (0.5x) or telephoto-only lenses
+    const standardBack = backCams.filter(
+      (c) => !/(ultra|0\.5|tele|depth)/i.test(c.label)
+    );
+    if (standardBack.length > 0) {
+      // On iOS/Android, the last standard rear camera in the list is typically the main/fusion sensor
+      return standardBack[standardBack.length - 1].id;
+    }
+
+    return backCams[backCams.length - 1].id;
   }
 
-  async function applyCameraFocusAndZoom(zoomValue = null) {
+  async function applyCameraFocusAndZoom() {
     try {
       const videoEl = document.querySelector('#cameraReader video');
       if (!videoEl || !videoEl.srcObject) return;
@@ -681,31 +637,11 @@
       const caps = track.getCapabilities();
       const advanced = {};
 
-      // Enable continuous autofocus so close-up barcodes focus automatically
       if (Array.isArray(caps.focusMode) && caps.focusMode.includes('continuous')) {
         advanced.focusMode = 'continuous';
       }
 
-      // Show/apply zoom controls if supported or fallback to CSS scale
-      zoomControlsRow.hidden = false;
       torchBtn.hidden = !caps.torch;
-
-      if (zoomValue !== null) {
-        if (caps.zoom) {
-          const clamped = Math.min(caps.zoom.max, Math.max(caps.zoom.min, zoomValue));
-          advanced.zoom = clamped;
-          videoEl.style.transform = '';
-        } else {
-          // CSS digital zoom fallback for devices without hardware zoom API
-          videoEl.style.transform = zoomValue > 1 ? `scale(${zoomValue})` : '';
-          videoEl.style.transformOrigin = 'center center';
-        }
-      } else if (caps.zoom && caps.zoom.max >= 1.5) {
-        // Default slight 1.5x zoom helps multi-lens phones focus sharply at 15-20cm
-        const defaultZoom = Math.min(caps.zoom.max, Math.max(caps.zoom.min, 1.5));
-        advanced.zoom = defaultZoom;
-        updateActiveZoomChip('1.5');
-      }
 
       if (Object.keys(advanced).length > 0) {
         await track.applyConstraints({ advanced: [advanced] });
@@ -713,66 +649,57 @@
     } catch {}
   }
 
-  function updateActiveZoomChip(valStr) {
-    document.querySelectorAll('.zoom-chip[data-zoom]').forEach((btn) => {
-      btn.classList.toggle('active', btn.getAttribute('data-zoom') === String(valStr));
-    });
-  }
-
   let nativeDetectorTimer = null;
 
   async function openCameraScanner() {
     scannerModal.hidden = false;
-    scannerStatus.textContent = 'Activando autoenfoque inteligente HD...';
+    scannerStatus.hidden = true;
+    scannerStatus.textContent = '';
+
+    // Clear any previously locked camera in localStorage so it never gets stuck on Camera 1
+    try {
+      localStorage.removeItem('imei_preferred_camera');
+    } catch {}
 
     if (typeof Html5Qrcode === 'undefined') {
-      scannerStatus.textContent = 'Usa el botón de abajo para tomar o subir una foto de la caja o pantalla.';
+      scannerStatus.hidden = false;
+      scannerStatus.textContent = 'Usa el botón de abajo para tomar o subir una foto.';
       return;
     }
 
     try {
-      // Populate cameras list in background only if user manually wants to switch lens later
-      Html5Qrcode.getCameras()
-        .then((cams) => {
-          camerasList = cams || [];
-          renderLensSelectorPills();
-        })
-        .catch(() => {});
-
-      const savedCameraId = (() => {
-        try {
-          return localStorage.getItem('imei_preferred_camera');
-        } catch {
-          return null;
+      let targetCamera = { facingMode: 'environment' };
+      try {
+        const cams = await Html5Qrcode.getCameras();
+        if (cams && cams.length > 0) {
+          targetCamera = pickAutomaticBestCamera(cams);
         }
-      })();
+      } catch {}
 
-      // Start with saved lens or automatic OS environment camera in Full HD (1920x1080)
-      await startCameraStream(savedCameraId || { facingMode: 'environment' });
+      await startCameraStream(targetCamera);
     } catch {
-      scannerStatus.textContent = 'Permiso de cámara no concedido o sin cámara disponible. Usa "Subir / Tomar Foto".';
+      try {
+        await startCameraStream({ facingMode: 'environment' });
+      } catch {
+        scannerStatus.hidden = false;
+        scannerStatus.textContent = 'Permiso de cámara no concedido. Usa "Subir / Tomar Foto".';
+      }
     }
   }
 
-  function onBarcodeDetectedSuccess(decodedText, cameraIdToSave) {
+  function onBarcodeDetectedSuccess(decodedText) {
     const extracted = extractImeiOrSerialFromText(decodedText);
     if (extracted) {
-      if (typeof cameraIdToSave === 'string') {
-        try {
-          localStorage.setItem('imei_preferred_camera', cameraIdToSave);
-        } catch {}
-      }
       playScanBeep();
       imeiInput.value = extracted;
       updateImeiValidation();
       closeCameraScannerModal();
       return true;
     }
-    scannerStatus.textContent = `Leído: ${decodedText} (buscando IMEI de 15 dígitos...)`;
     return false;
   }
 
-  function startNativeHardwareBarcodeLoop(videoEl, cameraIdToSave) {
+  function startNativeHardwareBarcodeLoop(videoEl) {
     if (nativeDetectorTimer) {
       clearInterval(nativeDetectorTimer);
       nativeDetectorTimer = null;
@@ -788,9 +715,8 @@
         try {
           const barcodes = await detector.detect(videoEl);
           if (barcodes && barcodes.length > 0) {
-            // Check all detected barcodes in frame at once (e.g. box label with multiple barcodes)
             for (const b of barcodes) {
-              if (b.rawValue && onBarcodeDetectedSuccess(b.rawValue, cameraIdToSave)) {
+              if (b.rawValue && onBarcodeDetectedSuccess(b.rawValue)) {
                 return;
               }
             }
@@ -823,46 +749,26 @@
       verbose: false
     });
 
-    scannerStatus.textContent = 'Apunta a 20 cm de la caja o pantalla (detecta automático sin acercarte tanto)...';
+    scannerStatus.hidden = true;
     torchEnabled = false;
 
-    const videoConstraints =
-      typeof cameraTarget === 'string'
-        ? {
-            deviceId: { exact: cameraTarget },
-            width: { ideal: 1920 },
-            height: { ideal: 1080 },
-            focusMode: 'continuous'
-          }
-        : {
-            facingMode: 'environment',
-            width: { ideal: 1920 },
-            height: { ideal: 1080 },
-            focusMode: 'continuous'
-          };
-
     await html5QrScanner.start(
-       cameraTarget,
+      cameraTarget,
       {
         fps: 20,
-        qrbox: (viewfinderWidth, viewfinderHeight) => {
-          const w = Math.min(Math.floor(viewfinderWidth * 0.88), 380);
-          const h = Math.min(Math.floor(viewfinderHeight * 0.45), 160);
-          return { width: Math.max(w, 220), height: Math.max(h, 95) };
-        },
-        videoConstraints
+        qrbox: { width: 240, height: 95 }
       },
       (decodedText) => {
-        onBarcodeDetectedSuccess(decodedText, typeof cameraTarget === 'string' ? cameraTarget : null);
+        onBarcodeDetectedSuccess(decodedText);
       },
       () => {}
     );
 
     setTimeout(() => {
-      applyCameraFocusAndZoom(null);
+      applyCameraFocusAndZoom();
       const videoEl = document.querySelector('#cameraReader video');
       if (videoEl) {
-        startNativeHardwareBarcodeLoop(videoEl, typeof cameraTarget === 'string' ? cameraTarget : null);
+        startNativeHardwareBarcodeLoop(videoEl);
       }
     }, 300);
   }
@@ -1084,25 +990,6 @@
   // Modals
   openScannerBtn.addEventListener('click', openCameraScanner);
   closeScannerBtn.addEventListener('click', closeCameraScannerModal);
-  switchCameraBtn.addEventListener('click', async () => {
-    if (camerasList.length > 1) {
-      currentCameraIdx = (currentCameraIdx + 1) % camerasList.length;
-      const camId = camerasList[currentCameraIdx].id;
-      try {
-        localStorage.setItem('imei_preferred_camera', camId);
-      } catch {}
-      renderLensSelectorPills();
-      await startCameraStream(camId);
-    }
-  });
-
-  document.querySelectorAll('.zoom-chip[data-zoom]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const z = parseFloat(btn.getAttribute('data-zoom') || '1');
-      updateActiveZoomChip(btn.getAttribute('data-zoom'));
-      applyCameraFocusAndZoom(z);
-    });
-  });
 
   torchBtn.addEventListener('click', async () => {
     try {
