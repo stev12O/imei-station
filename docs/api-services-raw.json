@@ -1,0 +1,479 @@
+﻿{
+    "Service List": [
+        {
+            "service": "0",
+            "name": "APPLE SOLD BY & COUNTRY INFO",
+            "price": "1.80"
+        },
+        {
+            "service": "1",
+            "name": "SAMSUNG INFO - PRO",
+            "price": "0.10"
+        },
+        {
+            "service": "3",
+            "name": "iCLOUD ON/OFF",
+            "price": "0.02"
+        },
+        {
+            "service": "6",
+            "name": "WW BLACKLIST STATUS - PRO",
+            "price": "0.12"
+        },
+        {
+            "service": "12",
+            "name": "IMEI &#x21C4; SN CONVERT",
+            "price": "0.025"
+        },
+        {
+            "service": "13",
+            "name": "MOTOROLA INFO",
+            "price": "0.08"
+        },
+        {
+            "service": "15",
+            "name": "HUAWEI INFO",
+            "price": "0.10"
+        },
+        {
+            "service": "17",
+            "name": "ALCATEL INFO",
+            "price": "0.10"
+        },
+        {
+            "service": "20",
+            "name": "KOREA BLACKLIST STATUS",
+            "price": "0.02"
+        },
+        {
+            "service": "21",
+            "name": "CRICKET USA STATUS - PRO",
+            "price": "0.15"
+        },
+        {
+            "service": "22",
+            "name": "LENOVO INFO",
+            "price": "0.06"
+        },
+        {
+            "service": "23",
+            "name": "ACER INFO",
+            "price": "0.06"
+        },
+        {
+            "service": "55",
+            "name": "ZTE | NUBIA | REDMAGIC INFO",
+            "price": "0.05"
+        },
+        {
+            "service": "31",
+            "name": "AUSTRALIA BLACKLIST STATUS",
+            "price": "0.01"
+        },
+        {
+            "service": "32",
+            "name": "JAPAN BLACKLIST STATUS",
+            "price": "0.08"
+        },
+        {
+            "service": "42",
+            "name": "GOOGLE PIXEL INFO",
+            "price": "0.12"
+        },
+        {
+            "service": "105",
+            "name": "APPLE SOLD BY & COUNTRY INFO",
+            "price": "1.60"
+        },
+        {
+            "service": "101",
+            "name": " APPLE ACTIVATION STATUS",
+            "price": "0.03"
+        },
+        {
+            "service": "203",
+            "name": "BRAND & MODEL INFO",
+            "price": "0.004"
+        },
+        {
+            "service": "110",
+            "name": "MACBOOK & iMAC iCLOUD ON/OFF STATUS",
+            "price": "0.15"
+        },
+        {
+            "service": "16",
+            "name": "T-MOBILE USA STATUS - PRO",
+            "price": "0.05"
+        },
+        {
+            "service": "111",
+            "name": "USA C SPIRE - CLEAN",
+            "price": "2.00"
+        },
+        {
+            "service": "113",
+            "name": "EMEA SERVICE - PREMIUM",
+            "price": "1.50"
+        },
+        {
+            "service": "26",
+            "name": "APPLE SERIAL INFO",
+            "price": "0.01"
+        },
+        {
+            "service": "29",
+            "name": "APPLE REPLACEMENTS HISTORY",
+            "price": "0.70"
+        },
+        {
+            "service": "115",
+            "name": "HTC INTERNATIONAL",
+            "price": "2.00"
+        },
+        {
+            "service": "116",
+            "name": "JAPAN NTT DOCOMO - CLEAN",
+            "price": "2.60"
+        },
+        {
+            "service": "206",
+            "name": "XIAOMI | REDMI | POCO MI LOCK ON/OFF INFO",
+            "price": "0.10"
+        },
+        {
+            "service": "103",
+            "name": "iPHONE CARRIER",
+            "price": "0.06"
+        },
+        {
+            "service": "51",
+            "name": "USA AT&T - CLEAN/ACTIVE LINE",
+            "price": "8.00"
+        },
+        {
+            "service": "104",
+            "name": "CANADA VIDEOTRON",
+            "price": "1.00"
+        },
+        {
+            "service": "34",
+            "name": "ASUS INFO",
+            "price": "0.06"
+        },
+        {
+            "service": "98",
+            "name": "UK O2 TESCO - CLEAN",
+            "price": "2.50"
+        },
+        {
+            "service": "97",
+            "name": "UK EE/ORANGE - PREMIUM",
+            "price": "2.00"
+        },
+        {
+            "service": "37",
+            "name": "SIM ICCID | IMSI INFO",
+            "price": "0.00"
+        },
+        {
+            "service": "96",
+            "name": "CANADA FIDO/ROGERS - PREMIUM",
+            "price": "20"
+        },
+        {
+            "service": "95",
+            "name": "CANADA TELUS - CLEAN (UP TO iPHONE 16)",
+            "price": "2.00"
+        },
+        {
+            "service": "94",
+            "name": "MDM LOCK BYPASS (MAX IOS 26) - iPHONE/iPAD",
+            "price": "16.0"
+        },
+        {
+            "service": "39",
+            "name": "OPPO | ONEPLUS | REALME - EUROPE INFO",
+            "price": "0.20"
+        },
+        {
+            "service": "40",
+            "name": "APPLE MDM & iCLOUD STATUS",
+            "price": "0.23"
+        },
+        {
+            "service": "43",
+            "name": "KYOCERA INFO",
+            "price": "0.05"
+        },
+        {
+            "service": "45",
+            "name": "ITEL | INFINIX | TECNO | SONIM INFO",
+            "price": "0.03"
+        },
+        {
+            "service": "125",
+            "name": "SAMSUNG EUROPE - PREMIUM",
+            "price": "18.0"
+        },
+        {
+            "service": "126",
+            "name": "JAPAN AU KDDI - CLEAN",
+            "price": "4.00"
+        },
+        {
+            "service": "127",
+            "name": "UK VODAFONE - CLEAN",
+            "price": "8.00"
+        },
+        {
+            "service": "245",
+            "name": "XIAOMI MI ACCOUNT REMOVE - EUROPE",
+            "price": "16.0"
+        },
+        {
+            "service": "81",
+            "name": "APPLE MDM STATUS",
+            "price": "0.22"
+        },
+        {
+            "service": "50",
+            "name": "PHILIPPINES GLOBE - CLEAN",
+            "price": "5.50"
+        },
+        {
+            "service": "52",
+            "name": "JAPAN SOFTBANK - CLEAN",
+            "price": "2.60"
+        },
+        {
+            "service": "53",
+            "name": "USA CRICKET - CLEAN & 6 MONTHS OLD",
+            "price": "6.00"
+        },
+        {
+            "service": "130",
+            "name": "SAMSUNG EUROPE - LIMITED COUNTRIES",
+            "price": "14.0"
+        },
+        {
+            "service": "54",
+            "name": "WW BLACKLIST STATUS",
+            "price": "0.04"
+        },
+        {
+            "service": "132",
+            "name": "CLARO ALL COUNTRIES - PREMIUM (iPHONE 14)",
+            "price": "59.0"
+        },
+        {
+            "service": "56",
+            "name": "DOOGEE INFO",
+            "price": "0.05"
+        },
+        {
+            "service": "57",
+            "name": "UK O2 - CLEAN",
+            "price": "7.50"
+        },
+        {
+            "service": "134",
+            "name": "SAMSUNG UK & IRELAND - PREMIUM",
+            "price": "18.0"
+        },
+        {
+            "service": "60",
+            "name": "APPLE iCLOUD ID HINT",
+            "price": "0.40"
+        },
+        {
+            "service": "61",
+            "name": "iPHONE CARRIER & FMI & BLACKLIST",
+            "price": "0.10"
+        },
+        {
+            "service": "63",
+            "name": "APPLE GSX PREMIUM DETAILS",
+            "price": "1.80"
+        },
+        {
+            "service": "65",
+            "name": "AT&T USA STATUS & UNLOCK",
+            "price": "0.40"
+        },
+        {
+            "service": "73",
+            "name": "HONOR INFO",
+            "price": "0.08"
+        },
+        {
+            "service": "66",
+            "name": "iPHONE & MAC iCLOUD CLEAN/LOST STATUS",
+            "price": "0.17"
+        },
+        {
+            "service": "68",
+            "name": "APPLE GSX CASES & REPAIRS",
+            "price": "1.10"
+        },
+        {
+            "service": "69",
+            "name": "ROMANIA ORANGE - PREMIUM",
+            "price": "14.0"
+        },
+        {
+            "service": "71",
+            "name": "ROMANIA VODAFONE - PREMIUM",
+            "price": "18.0"
+        },
+        {
+            "service": "135",
+            "name": "CLARO ALL COUNTRIES - PREMIUM (UP TO iPHONE 13)",
+            "price": "47.0"
+        },
+        {
+            "service": "72",
+            "name": "APPLE CARRIER + MDM & iCLOUD & GSX STATUS",
+            "price": "0.30"
+        },
+        {
+            "service": "137",
+            "name": "AUSTRIA A1 MOBILKOM - PREMIUM",
+            "price": "165"
+        },
+        {
+            "service": "138",
+            "name": "AUSTRIA A1 MOBILKOM - OUT OF CONTRACT",
+            "price": "115"
+        },
+        {
+            "service": "75",
+            "name": "VIVO | IQOO INFO",
+            "price": "0.02"
+        },
+        {
+            "service": "77",
+            "name": "APPLE GSX REPAIR ELIGIBILITY",
+            "price": "0.14"
+        },
+        {
+            "service": "78",
+            "name": "iPHONE CARRIER & FMI",
+            "price": "0.08"
+        },
+        {
+            "service": "80",
+            "name": "SAMSUNG INFO",
+            "price": "0.06"
+        },
+        {
+            "service": "82",
+            "name": "SAMSUNG KNOX GUARD INFO",
+            "price": "0.30"
+        },
+        {
+            "service": "142",
+            "name": "CLARO ALL COUNTRIES - PREMIUM (iPHONE 15)",
+            "price": "89.0"
+        },
+        {
+            "service": "219",
+            "name": "APPLE PART NUMBER - MPN",
+            "price": "0.15"
+        },
+        {
+            "service": "230",
+            "name": "XFINITY USA STATUS - PRO",
+            "price": "0.08"
+        },
+        {
+            "service": "234",
+            "name": "USA AT&T - SOLD DATE: 60 DAYS (UP TO iPHONE 14)",
+            "price": "28.0"
+        },
+        {
+            "service": "220",
+            "name": "TRACFONE USA STATUS - PRO",
+            "price": "0.06"
+        },
+        {
+            "service": "231",
+            "name": "CSPIRE USA STATUS - PRO",
+            "price": "0.08"
+        },
+        {
+            "service": "232",
+            "name": "VERIZON USA STATUS - PRO",
+            "price": "0.07"
+        },
+        {
+            "service": "233",
+            "name": "NOTHING PHONE INFO",
+            "price": "0.03"
+        },
+        {
+            "service": "86",
+            "name": "SPARX INFO",
+            "price": "0.01"
+        },
+        {
+            "service": "87",
+            "name": "UNITY CELLECOR INFO",
+            "price": "0.01"
+        },
+        {
+            "service": "88",
+            "name": "APPLE ACTIVATION STATUS - PRO",
+            "price": "0.04"
+        },
+        {
+            "service": "92",
+            "name": "APPLE MODEL CONFIGURATION INFO",
+            "price": "0.015"
+        },
+        {
+            "service": "24",
+            "name": "BRAZIL BLACKLIST STATUS",
+            "price": "0.09"
+        },
+        {
+            "service": "146",
+            "name": "APPLE GSX PREMIUM - PROMO",
+            "price": "0.60"
+        },
+        {
+            "service": "147",
+            "name": "iPHONE CARRIER & FMI & BLACKLIST - S2",
+            "price": "0.25"
+        },
+        {
+            "service": "151",
+            "name": "iPHONE CARRIER & CHIMAERA DETECT",
+            "price": "0.12"
+        },
+        {
+            "service": "152",
+            "name": " APPLE WARRANTY STATUS - BY SERIAL",
+            "price": "0.03"
+        },
+        {
+            "service": "153",
+            "name": "XIAOMI | REDMI | POCO WARRANTY INFO",
+            "price": "0.10"
+        },
+        {
+            "service": "159",
+            "name": "IRELAND HUTCHISON THREE / O2 - PREMIUM",
+            "price": "4.00"
+        },
+        {
+            "service": "160",
+            "name": "MDM LOCK BYPASS (IOS 27) - iPHONE/iPAD",
+            "price": "20.0"
+        },
+        {
+            "service": "161",
+            "name": "iPHONE MODEL COLOR & CAPACITY",
+            "price": "0.022"
+        }
+    ]
+}

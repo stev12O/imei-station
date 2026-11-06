@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>IMEI Station · Diagnóstico de Equipos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <!-- Barcode / QR Scanner library for phone boxes & *#06# screens -->
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+          </svg>
+        </div>
+        <div>
+          <h1 class="brand-title">IMEI Station</h1>
+          <p class="brand-subtitle">Terminal de Diagnóstico · Uso Interno</p>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <button type="button" id="balanceBtn" class="balance-pill" title="Actualizar saldo disponible en Sickw">
+          <span class="balance-dot" id="balanceDot"></span>
+          <span class="balance-label">Saldo</span>
+          <strong class="balance-amount" id="balanceValue">$—</strong>
+          <span class="balance-currency">USD</span>
+          <svg class="balance-refresh-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 2v6h-6"></path>
+            <path d="M3 12a9 9 0 0 1 15-6.7L21 8"></path>
+            <path d="M3 22v-6h6"></path>
+            <path d="M21 12a9 9 0 0 1-15 6.7L3 16"></path>
+          </svg>
+        </button>
+
+        <nav class="view-tabs" role="tablist" aria-label="Vistas principales">
+          <button type="button" role="tab" aria-selected="true" class="view-tab active" data-view="checker" id="tabChecker">
+            Diagnóstico
+          </button>
+          <button type="button" role="tab" aria-selected="false" class="view-tab" data-view="history" id="tabHistory">
+            Historial
+            <span class="tab-count" id="historyCount">0</span>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="workspace">
+    <!-- VISTA 1: CONSOLA DE DIAGNÓSTICO -->
+    <section id="viewChecker" class="view-panel active" aria-labelledby="tabChecker">
+      <div class="console-card">
+        <form id="checkForm" novalidate>
+          <!-- Barra de entrada IMEI / Serial + Escáner -->
+          <div class="input-header">
+            <label for="imeiInput" class="field-label">IMEI (15 dígitos) o Número de Serie</label>
+            <div class="validation-badge" id="validationBadge" aria-live="polite">
+              Marca *#06# en el teléfono o escanea la caja
+            </div>
+          </div>
+
+          <div class="imei-bar">
+            <div class="imei-input-wrap">
+              <input
+                type="text"
+                id="imeiInput"
+                name="imei"
+                class="imei-input"
+                placeholder="Ej. 354442067957452 o Serie Apple"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="characters"
+                spellcheck="false"
+                maxlength="24"
+                autofocus
+              />
+              <button type="button" id="clearImeiBtn" class="icon-action-btn" title="Limpiar campo" aria-label="Limpiar IMEI" hidden>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+
+            <button type="button" id="pasteBtn" class="secondary-btn" title="Pegar desde el portapapeles">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span>Pegar</span>
+            </button>
+
+            <button type="button" id="openScannerBtn" class="scanner-btn" title="Escanear código de barras o texto con la cámara">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+                <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+                <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+                <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+                <line x1="7" y1="12" x2="17" y2="12"></line>
+              </svg>
+              <span>Escanear Cámara</span>
+            </button>
+          </div>
+
+          <div class="imei-formatted-preview" id="imeiPreview" hidden>
+            <span class="preview-caption">Formato lectura:</span>
+            <code id="imeiFormattedText"></code>
+          </div>
+
+          <!-- Selección rápida de servicios para tienda -->
+          <div class="service-section">
+            <div class="service-header">
+              <span class="field-label">Checks Rápidos de Recepción</span>
+              <button type="button" id="openCatalogBtn" class="text-link-btn">
+                Ver catálogo completo (<span id="totalServicesCount">94</span> servicios)
+              </button>
+            </div>
+
+            <div class="quick-presets" id="quickPresets" role="radiogroup" aria-label="Servicios frecuentes">
+              <!-- Se inyecta dinámicamente en app.js -->
+            </div>
+
+            <!-- Barra del servicio activo + botones de acción -->
+            <div class="active-service-bar">
+              <div class="selected-service-info">
+                <span class="selected-service-badge" id="selectedServiceId">#61</span>
+                <div class="selected-service-text">
+                  <strong id="selectedServiceName">iPHONE CARRIER &amp; FMI &amp; BLACKLIST</strong>
+                  <span id="selectedServiceCategory">Apple Check Services</span>
+                </div>
+                <span class="selected-service-price" id="selectedServicePrice">$0.10</span>
+              </div>
+
+              <div class="submit-actions">
+                <button type="button" id="sampleBtn" class="ghost-btn" title="Ver ejemplo real de este servicio sin gastar saldo">
+                  Vista previa sin costo
+                </button>
+                <button type="submit" id="submitCheckBtn" class="primary-btn">
+                  <span id="submitBtnText">Consultar Equipo</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Mensaje de error si ocurre -->
+      <div id="errorBanner" class="error-banner" role="alert" hidden>
+        <div class="error-banner-content">
+          <strong id="errorTitle">No se pudo completar la consulta</strong>
+          <p id="errorMessage"></p>
+        </div>
+        <button type="button" id="closeErrorBtn" class="icon-action-btn" aria-label="Cerrar alerta">✕</button>
+      </div>
+
+      <!-- TARJETA DE DIAGNÓSTICO VISUAL (SEMÁFORO) -->
+      <div id="diagnosticContainer" class="diagnostic-container" aria-live="polite" hidden>
+        <article class="diagnostic-sheet" id="diagnosticSheet">
+          <!-- Cabecera de Veredicto Ejecutivo -->
+          <div class="verdict-banner" id="verdictBanner" data-status="ok">
+            <div class="verdict-indicator" id="verdictIcon" aria-hidden="true"></div>
+            <div class="verdict-copy">
+              <div class="verdict-meta">
+                <span id="resultModeBadge" class="mode-tag">CONSULTA EN VIVO</span>
+                <span id="resultTimestamp" class="meta-item"></span>
+                <span id="resultOrderId" class="meta-item mono"></span>
+                <span id="resultCost" class="meta-item mono"></span>
+              </div>
+              <h2 class="verdict-title" id="verdictTitle">EQUIPO LIMPIO · APTO</h2>
+              <p class="verdict-subtitle" id="verdictSubtitle"></p>
+            </div>
+            <div class="verdict-actions">
+              <button type="button" id="copyWhatsappBtn" class="action-pill-btn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span id="copyWhatsappText">Copiar Resumen</span>
+              </button>
+              <button type="button" id="printSheetBtn" class="action-pill-btn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                  <rect x="6" y="14" width="12" height="8"></rect>
+                </svg>
+                <span>Imprimir</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Franja de Identidad de Hardware -->
+          <div class="hardware-identity">
+            <div class="hw-main">
+              <span class="hw-brand" id="hwBrand">APPLE</span>
+              <h3 class="hw-model" id="hwModel">IPHONE 13 PRO 128GB</h3>
+              <p class="hw-sub" id="hwSub"></p>
+            </div>
+            <div class="hw-identifiers" id="hwIdentifiers">
+              <!-- Chips copiables: IMEI, IMEI2, Serial, MEID -->
+            </div>
+          </div>
+
+          <!-- Grilla Semáforo de Estado (Traffic-Light Indicators) -->
+          <div class="semaforo-section" id="semaforoSection">
+            <h4 class="section-heading">Semáforo de Seguridad y Bloqueos</h4>
+            <div class="semaforo-grid" id="semaforoGrid">
+              <!-- Tarjetas Verde / Ámbar / Rojo inyectadas por app.js -->
+            </div>
+          </div>
+
+          <!-- Tabla Técnica Completa -->
+          <div class="specs-section">
+            <div class="specs-header">
+              <h4 class="section-heading">Ficha Técnica Devuelta</h4>
+              <button type="button" id="toggleRawBtn" class="text-link-btn">Ver respuesta original</button>
+            </div>
+            <div class="specs-grid" id="specsGrid">
+              <!-- Filas clave-valor -->
+            </div>
+
+            <!-- Secciones adicionales (Casos GSX, Historial de Reemplazos, Notas) -->
+            <div id="extraSectionsContainer" class="extra-sections"></div>
+
+            <!-- Respuesta cruda plegable -->
+            <pre id="rawOutputBox" class="raw-output-box" hidden></pre>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- VISTA 2: HISTORIAL DE CONSULTAS -->
+    <section id="viewHistory" class="view-panel" aria-labelledby="tabHistory" hidden>
+      <div class="console-card">
+        <div class="history-toolbar">
+          <div>
+            <h2 class="panel-title">Historial de Equipos Consultados</h2>
+            <p class="panel-subtitle">Registro guardado en el servidor + búsqueda directa en Sickw por IMEI u Orden.</p>
+          </div>
+          <div class="history-search-bar">
+            <input
+              type="search"
+              id="historySearchInput"
+              class="search-input"
+              placeholder="Filtrar por IMEI, modelo o ID de orden..."
+              autocomplete="off"
+            />
+            <button type="button" id="remoteHistoryBtn" class="secondary-btn" title="Buscar este IMEI/Orden directamente en el servidor de Sickw">
+              Buscar en Sickw
+            </button>
+          </div>
+        </div>
+
+        <div id="historyList" class="history-list">
+          <!-- Lista de consultas -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL 1: ESCÁNER DE CÁMARA (CÓDIGO DE BARRAS / QR / FOTO OCR) -->
+  <div id="scannerModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="scannerModalTitle" hidden>
+    <div class="modal-dialog scanner-dialog">
+      <div class="modal-header">
+        <div>
+          <h3 id="scannerModalTitle" class="modal-title">Escáner de IMEI / Serie</h3>
+          <p class="modal-subtitle">Apunta al código de barras de la caja o a la pantalla *#06# del teléfono</p>
+        </div>
+        <button type="button" id="closeScannerBtn" class="icon-action-btn" aria-label="Cerrar escáner">✕</button>
+      </div>
+
+      <div class="scanner-body">
+        <div id="cameraReader" class="camera-viewport"></div>
+        <div id="scannerStatus" class="scanner-status">Iniciando cámara...</div>
+
+        <div class="scanner-controls">
+          <button type="button" id="switchCameraBtn" class="secondary-btn">
+            Cambiar Cámara
+          </button>
+          <label for="photoScanInput" class="secondary-btn file-label-btn">
+            Subir / Tomar Foto de Caja o Pantalla
+            <input type="file" id="photoScanInput" accept="image/*" capture="environment" hidden />
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: CATÁLOGO COMPLETO DE 94 SERVICIOS -->
+  <div id="catalogModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="catalogModalTitle" hidden>
+    <div class="modal-dialog catalog-dialog">
+      <div class="modal-header">
+        <div>
+          <h3 id="catalogModalTitle" class="modal-title">Catálogo Completo de Servicios</h3>
+          <p class="modal-subtitle">Selecciona cualquier servicio activo en tu cuenta de Sickw</p>
+        </div>
+        <button type="button" id="closeCatalogBtn" class="icon-action-btn" aria-label="Cerrar catálogo">✕</button>
+      </div>
+
+      <div class="catalog-search-wrap">
+        <input
+          type="search"
+          id="catalogSearchInput"
+          class="search-input"
+          placeholder="Buscar por nombre (ej. GSX, MDM, Knox, Carrier, Xiaomi, #61)..."
+          autocomplete="off"
+        />
+      </div>
+
+      <div id="catalogList" class="catalog-list">
+        <!-- Categorías y servicios -->
+      </div>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

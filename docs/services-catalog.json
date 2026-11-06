@@ -1,0 +1,602 @@
+﻿[
+    {
+        "category":  "Apple Check Services",
+        "count":  26,
+        "services":  [
+                         {
+                             "id":  "105",
+                             "name":  "APPLE SOLD BY \u0026 COUNTRY INFO",
+                             "price":  "1.60",
+                             "sample":  "Description: IPHONE 13 PRO SILVER 128GB-GBR\nModel: IPHONE 13 PRO ROW 128GB SILVER\nIMEI Number: 350060424216xxx\nIMEI2 Number: 350060423729xxx\nMEID Number: 35006042421xxx\nSerial Number: XXX6LY7NNQ\nFind My iPhone: OFF\nReplaced Device: NO\nCoverage Status: Apple Limited Warranty\nProduct Sold By: SKY UK LIMITED\nPurchase Country: United Kingdom\nEstimated Purchase Date: 12 February 2022\nCoverage Start: 12 February 2022\nCoverage End: 11 February 2023\nSim-Lock: Unlocked"
+                         },
+                         {
+                             "id":  "63",
+                             "name":  "APPLE GSX PREMIUM DETAILS",
+                             "price":  "1.80",
+                             "sample":  "SERIAL: DxxxxxKF4YF\nIMEI: 3519760642xxxxx\nIMEI2: 3519760232xxxxx\nMEID: 35197606429336\nConfig Code: F4YF\nSold To Name: AT\u0026T MOBILITY LLC\nPurchase Country Desc: United States\nProduct Line: 134321\nConfig Description: OBS,IPAD AIR,CELL,32GB,GRAY\nWarranty Status Code: OO\nWarranty Status Description: Out Of Warranty (No Coverage)\nPurchase Date: 2013-08-19 21:00:00\nPurchase Country Code: USA\nWireless Mac Address: 783A84xxxxx *Optional info\nApplied Activation Details: P10x Multi-Mode Carrier Policy\nApplied Activation Policy Id: 2104\nFirst Activation Date: 2021-07-07 13:53:06\nInitial Activation Policy Id: 2104\nInitial Activation Policy Details: P10x Multi-Mode Carrier Policy\nLast Restore Date: 2022-07-28 13:06:01\nLast Unbrick Os Build: 16H81\nNext Tether Policy Id: 2104\nNext Tether Policy Details: P10x Multi-Mode Carrier Policy\nProduct Description: IPAD WIFI CELL 32GB SPACE GRAY ATT-USA\nProduct Version: 12.1.7\nMDM Lock: ON *Optional info\niCloud Lock: ON\niCloud Status: LOST *Optional info\nSIM Lock: Unlocked\n\nCase Details\nCase Id: 101822xx5856 Created Date Time: 2022-10-04T17:59:17.72Z Summary: iPhone\nCase Id: 101816xx9857 Created Date Time: 2022-09-28T19:24:58.666Z Summary: Cellular service\nCase Id: 101766xx6084 Created Date Time: 2022-08-04T19:29:47.847Z Summary: Mic quality during phone calls\n\nReplacement History\nImei2: 353050111478xxx Meid: 35305011107xxx Serial: DNPDH22Y0xxx Imei: 353050111075xxx Serial Status Code: Active\nImei2: 351109222892xxx Meid: 35110922287xxx Serial: F17G60ST0xxx Imei: 351109222873xxx Replacement Date: 2022-10-10T08:50:26Z Serial Status Code: Original\n\nReplaced, Vintage, Refurbished devices have limited info in GSX! No refund!"
+                         },
+                         {
+                             "id":  "146",
+                             "name":  "APPLE GSX PREMIUM - PROMO",
+                             "price":  "0.60",
+                             "sample":  "SERIAL: DxxxxxKF4YF\nIMEI: 3519760642xxxxx\nIMEI2: 3519760232xxxxx\nMEID: 35197606429336\nConfig Code: F4YF\nSold To Name: AT\u0026T MOBILITY LLC\nPurchase Country Desc: United States *Optional info\nProduct Line: 134321\nConfig Description: OBS,IPAD AIR,CELL,32GB,GRAY\nWarranty Status Code: OO\nWarranty Status Description: Out Of Warranty (No Coverage)\nPurchase Date: 2013-08-19 21:00:00\nWireless Mac Address: 783A84xxxxx *Optional info\nApplied Activation Details: P10x Multi-Mode Carrier Policy\nApplied Activation Policy Id: 2104\nFirst Activation Date: 2021-07-07 13:53:06\nInitial Activation Policy Id: 2104\nInitial Activation Policy Details: P10x Multi-Mode Carrier Policy\nLast Restore Date: 2022-07-28 13:06:01\nLast Unbrick Os Build: 16H81\nNext Tether Policy Id: 2104\nNext Tether Policy Details: P10x Multi-Mode Carrier Policy\nProduct Description: IPAD WIFI CELL 32GB SPACE GRAY ATT-USA\nProduct Version: 12.1.7\niCloud Lock: ON\niCloud Status: LOST *Optional info\n\nCase Details\nCase Id: 101822xx5856 Created Date Time: 2022-10-04T17:59:17.72Z Summary: iPhone\nCase Id: 101816xx9857 Created Date Time: 2022-09-28T19:24:58.666Z Summary: Cellular service\nCase Id: 101766xx6084 Created Date Time: 2022-08-04T19:29:47.847Z Summary: Mic quality during phone calls\n\nReplacement History\nImei2: 353050111478xxx Meid: 35305011107xxx Serial: DNPDH22Y0xxx Imei: 353050111075xxx Serial Status Code: Active\nImei2: 351109222892xxx Meid: 35110922287xxx Serial: F17G60ST0xxx Imei: 351109222873xxx Replacement Date: 2022-10-10T08:50:26Z Serial Status Code: Original\n\nReplaced, Vintage, Refurbished devices have limited info in GSX! No refund!"
+                         },
+                         {
+                             "id":  "29",
+                             "name":  "APPLE REPLACEMENTS HISTORY",
+                             "price":  "0.70",
+                             "sample":  "SERIAL: xxxxxJZGRX4\nIMEI: 3533xxxxx50571\nMEID: 3533xxxxx25057\nProduct Description: SVC,IPHONE 6S PLUS,B30,64GB,RG,CI/AR\nConfig Description: IPHONE 6S PLUS,B30,64GB,RGLD\n\nReplacement History\nxxxxxJZGRX4 3533xxxxx50571 3533xxxxx25057 Active\nxxxxx9WGRX4 3532xxxxx1710 353xxxxx6171 Original 2016-06-13\n\nNote:\n- All orders are charged, even if they not have Replacements records."
+                         },
+                         {
+                             "id":  "77",
+                             "name":  "APPLE GSX REPAIR ELIGIBILITY",
+                             "price":  "0.14",
+                             "sample":  "Serial Number: HKPW6LXXXX\nIMEI: 35193556765XXXX\nIMEI2: 35193556791XXXX\nConfig Description: IPHONE 16,NAMM,128GB,PNK\nPossible Messages:\n1 - No service errors found. Device is eligible for authorized repair.\n2 - This serial number has already been replaced and is no longer eligible for service.\n3 - This product is not eligible for service.\n4 - Apples system indicates that this device has been reported as lost under AppleCare’s AppleCare+ with Theft and Loss coverage.\n5 - This product is obsolete and Apple is unable to offer service. Encourage the customer to consider an alternative product rather than repair service.\n\nIMPORTANT:\nError 3 \u0026 4 Means device activation is Blacklisted by Apple with a Chimaera policy.\nChimaera is Apple\u0027s internal policy/system for handling lost or stolen devices, specifically tied to AppleCare+ with Theft and Loss claims. Here\u0027s what I know:\nWhat Chimaera does:\n\nWhen a customer files a Theft \u0026 Loss claim through AppleCare+, Apple flags the original device with a Chimaera policy\nThe lost/stolen device gets permanently blacklisted at the activation level\nEven if someone finds or buys the device, it cannot be activated or serviced\nThe policy is applied at Apple\u0027s server level, so it cannot be bypassed by a restore or hardware repair\n\nHow it shows in GSX:\nYou\u0027ll see \"Next Tether Policy\": \"Chimaera Device Policy\" in the device data\nError OP787 (error 3) = generic ineligible for service\nError about AppleCare+ Theft and Loss = explicitly flagged as a claimed lost device\n\nPractical meaning:\n- The original owner received a replacement device from Apple\n- The old device is now permanently locked to Chimaera\n- Cannot be repaired, activated, or serviced by anyone\n- Extremely common in stolen/second-hand phone fraud\n\nBottom line: If you see a Chimaera policy on a device, it\u0027s essentially an expensive brick — walk away from it if you\u0027re buying, and refuse service if you\u0027re a repair shop."
+                         },
+                         {
+                             "id":  "68",
+                             "name":  "APPLE GSX CASES \u0026 REPAIRS",
+                             "price":  "1.10",
+                             "sample":  "Description: IPHONE X SILVER 64GB AT\u0026T-USA\nModel: iPhone X 64GB Silver Cellular [A1901] [iPhone10,6]\nIMEI: 35940508999xxxx\nSN: DNxxxxCDJCLJ\nWarranty Status: Out Of Warranty\nReplaced Device: Yes\n\nCase Details\nStatus: OPEN\nLast Modified: 2019-07-05T13:19:22.519Z\nId: 100848854611\nTitle: iPhone\nSupport Topic: iPhone\nStatus Description: Open\nRepair Id: G369065111\n\nRepair Details\nParts Details [1]\nS6259Z/A IPHONE X FLAT RATE CHARGE CNTC\nRU661-08695 64GB, Silver, GSM, iPhone X, CI/AR, RUS MOD\nS6259Z/A IPHONE X FLAT RATE CHARGE DEP\n\nComponent Issues [1]\nOrder: 1\nPriority: 1\nType: RV_TECH\nPrevious Comptia Code: B35\nPrevious Comptia Description: Touch ID/Face ID Functionality\nComponent Code: 26112D\nIssue Code: IP304\nOrder: 1\nPriority: 1\nType: TECH\nComponent Description: Physical Damage\nIssue Description: Swollen battery\nRepair Type: WUMS\nRepair Id: G369065111\nRepair Status: SCOM\nRepair Status Description: Closed and completed\nRepair Create Date: 2019-01-05T13:17:55Z\nLast Modified Date: 2019-01-20T07:58:12.819Z\nClosed Date: 2019-01-20T07:58:12.819Z\nRepair Type Description: Mail In Return to Service Location"
+                         },
+                         {
+                             "id":  "60",
+                             "name":  "APPLE iCLOUD ID HINT",
+                             "price":  "0.40",
+                             "sample":  "Model Description: IPHONE 14 STARLIGHT 128GB-USA\nModel: IPHONE 14 STARLIGHT 128GB-USA\nIMEI: 35938853818xxx\nIMEI2: 35938853813xxx\nMEID: 3593885381xxx\nSerial Number: J6WxxxP4J\nWarranty Status: Out Of Warranty\nEstimated Purchase Date: 2023-11-03\nReplaced: No\nFMI: ON\nApple ID: j*****@gmail.com\n\nOnly hint is provided! Not full email!\nService only works for iPhone/iPad"
+                         },
+                         {
+                             "id":  "219",
+                             "name":  "APPLE PART NUMBER - MPN",
+                             "price":  "0.15",
+                             "sample":  "Serial Number: LP0K944XXX\nPart Number: MCAE4LL/A\nModel Description: iPad Air 11-inch Display 512GB Purple Wifi"
+                         },
+                         {
+                             "id":  "103",
+                             "name":  "iPHONE CARRIER",
+                             "price":  "0.06",
+                             "sample":  "Locked Device:\nModel Description: IPHONE 14 PRO MAX SPACE BLACK 512GB-USA\nModel: iPhone 14 Pro Max\nIMEI: 353360946559xxxx\nIMEI2: 35336094721xxxx\nMEID: 35336094655xxx\nSerial Number: KCGXXXXR71\nWarranty Status: Limited Warranty\nEstimated Purchase Date: 2023-01-28\nDemo Unit: No\nLoaner Device: No\nReplaced Device: No\nReplacement Device: No\nRefurbished Device: No\nPurchase Country: United States *Optional info, will show only if found.\nLocked Carrier: 2387 - US Verizon Locked Policy\nSIM-Lock: Locked\n\nUnlocked Device:\nModel Description: IPHONE 14 PRO SPACE BLACK 128GB-USA\nModel: iPhone 14 Pro\nIMEI: 35971228553xxx\nIMEI2: 35971228569xxx\nMEID: 35971228553xxx\nSerial Number: MM7XXX0VV4\nWarranty Status: Limited Warranty\nDemo Unit: No\nLoaner Device: No\nReplaced Device: No\nReplacement Device: No\nRefurbished Device: No\nPurchase Country: United States *Optional info, will show only if found.\nSIM-Lock: Unlocked"
+                         },
+                         {
+                             "id":  "78",
+                             "name":  "iPHONE CARRIER \u0026 FMI",
+                             "price":  "0.08",
+                             "sample":  "Model Description: IPHONE 14 STARLIGHT 128GB-USA\nIMEI: 35883259944XXXX\nIMEI2: 35883259862XXXX\nMEID: 3588325994XXXX\nSerial Number: V9267DXXXX\nTelephone Technical Support: Active\nTelephone Technical Support Expires In: 2 Months and 29 Days\nTelephone Technical Support Expiration Date: 2023-03-10\nRepairs and Service Coverage: Active\nRepairs and Service Expires In: 11 Months and 28 Days\nRepairs and Service Expiration Date: 2023-12-09\nWarranty Status: Apple Limited Warranty\nEstimated Purchase Date: 2022-12-10\nActivation Status: Activated\nRegistration Status: Registered\nAppleCare Eligible: Yes\nAppleCare Eligible Offer: ACPLUS\nValid Purchase Date: Yes\niCloud Lock: ON\nDemo Unit: No\nLoaner Device: No\nReplaced Device: No\nReplacement Device: No\nRefurbished Device: No\nPurchase Country: United States\nLocked Carrier: 23 - US AT\u0026T Activation Policy\nSim-Lock Status: Locked"
+                         },
+                         {
+                             "id":  "151",
+                             "name":  "iPHONE CARRIER \u0026 CHIMAERA DETECT",
+                             "price":  "0.12",
+                             "sample":  "Chimaera Device:\nIMEI: 35155346165xxxx\nIMEI2: 35155346694xxxx\nSerial Number: LV7XP6xxxx\nModel: IPHONE 16 PLUS PNK 128GB DEMO-USA\nEstimated Purchase Date: 2024-09-20\nCarrier: Blacklist/Chimaera Device Policy\nSIMLock Status: Blacklist/Chimaera Device Policy\n\nLocked Device:\nIMEI: 35120558345xxxx\nIMEI2: 35120558353xxxx\nSerial Number: K50XHYxxxx\nModel: IPHONE 17 MIST BLUE 256GB-USA\nEstimated Purchase Date: 2026-06-04\nCountry: United States\nCarrier: US Verizon Locked Policy\nSIMLock Status: Locked\n\nUnlocked Device:\nIMEI: 35805791583xxxx\nIMEI2: 35805791594xxxx\nSerial Number: K9LN6Hxxx\nModel: IPHONE 14 PRO MAX DEEP PURPLE 128GB-USA\nEstimated Purchase Date: 2023-06-27\nCountry: United States\nCarrier: Unlock\nSIMLock Status: Unlocked"
+                         },
+                         {
+                             "id":  "61",
+                             "name":  "iPHONE CARRIER \u0026 FMI \u0026 BLACKLIST",
+                             "price":  "0.10",
+                             "sample":  "Model: iPhone 12 Pro 128GB Graphite [A2341] [iPhone13,3]\nDescription: IPHONE 12 PRO GRAPHITE 128GB-USA\nIMEI Number: 356478840268XXX\nSerial Number: G6TDW22T0XXX\nIMEI2 Number: 356478840430XXX\nMEID Number: 35647884026XXX\nLoaner Device: No\nReplaced Device: No\nAppleCare Eligible: No\nValid Purchase Date: Yes\nActivation Status: Activated\nRegistration Status: Registered\nTelephone Technical Support: Expired\nRepairs and Service Coverage: Active\nRepairs and Service Expires In: 7 Months and 21 Days\nRepairs and Service Expiration Date: 2022-09-17\nWarranty Status: Apple Limited Warranty\nEstimated Purchase Date: September 18, 2021\niCloud Lock: OFF\nBlacklist Status: CLEAN\nLocked Carrier: US T-Mobile Locked Activation Policy\nCountry: United States\nSIM-Lock: Locked"
+                         },
+                         {
+                             "id":  "147",
+                             "name":  "iPHONE CARRIER \u0026 FMI \u0026 BLACKLIST - S2",
+                             "price":  "0.25",
+                             "sample":  "IPHONE 17E,NAJP,256GB,SOFT PINK\nModel Description: IPHONE 17E,NAJP,256GB,SOFT PINK\n\nIMEI: 35105xxxxxx\n\nIMEI2: 35105xxxxxx\n\nMEID: 35105xxxxxx\n\nSerial Number: LDDFxxxxx\n\nTelephone Technical Support: Active\n\nTelephone Technical Support Expires In: 2 Months and 21 Days\n\nTelephone Technical Support Expiration Date: 2026-10-11\n\nRepairs and Service Coverage: Active\n\nRepairs and Service Expires In: 11 Months and 22 Days\n\nRepairs and Service Expiration Date: 2027-07-11\n\nEstimated Purchase Date: 2026-08-01\n\nWarranty Status: Limited Warranty\n\niCloud Lock: OFF\n\nDemo Unit: No\n\nLoaner Device: No\n\nReplaced Device: No\n\nReplacement Device: No\n\nRefurbished Device: No\n\nAppleCare Eligible: No\n\nValid Purchase Date: Yes\n\nActivation Status: Activated\n\nRegistration Status: Registered\n\nBlacklist Status: Reported Stolen or Lost\n\nPurchase Country: United States\n\nLocked Carrier: 23 - US AT\u0026T Activation Policy\n\nSim-Lock Status: Locked\n\nGSMA Report:\n\nIMEI: 35105xxxxxx\n\nModel Name: iPhone 17e (A3571)\n\nManufacturer: Apple Korea\n\nDevice Type: Smartphone\n\nBlacklist Status: Blacklisted\n\nBlacklist Records: 1\n\nBlacklist Action: Block Insert\n\nBlacklist Code: 0011\n\nBlacklist Reason: Stolen or Lost\n\nBlacklist Date: 2026-07-21 11:13:05\n\nBlacklisted by: AT\u0026T Mobility\n\nBlacklisted Country: United States"
+                         },
+                         {
+                             "id":  "72",
+                             "name":  "APPLE CARRIER + MDM \u0026 iCLOUD \u0026 GSX STATUS",
+                             "price":  "0.30",
+                             "sample":  "Device Configuration: SVC,IPHONE 8,JPN MM,256GB,SPACE GRAY,AEX\nMaterial Number: J661-09214\nBasic Material: A1906\nDeviceID: 356094095083xxx\nIMEI: 356094095083xxx\nSERIAL: FFMYW0LPJxxx\nOld DeviceID: F4GX43RDJxxx\nOld IMEI: 352997098250xxx\nOld MEID: 35299709825xxx\nAppleCare Description: ACS KDDI for iPhone 8, 7, 6s, 6 (Refer to CP401338 for iCloud)\nAppleCare Order Description: Order creation completed\nCoverage Duration: Ends on 11/09/22\nInitial Unbrick: 10/08/19\nDevice Activation: No\nLimited Warranty: No\nIncidents Available: No\nMDM Lock: OFF\niCloud Lock: ON\niCloud Status: CLEAN\nUnlock Status: UNLOCK\nInitial Activation Policy Description: 2322 - Japan Service Policy (S2322 - JAPAN_N51_N48_SERVICE)\nLast Activation Policy Description: 2432 - Japan KDDI Unlock Policy (F2432 - UNLOCK)\nNext Activation Policy Description: 2432 - Japan KDDI Unlock Policy (F2432 - UNLOCK)"
+                         },
+                         {
+                             "id":  "92",
+                             "name":  "APPLE MODEL CONFIGURATION INFO",
+                             "price":  "0.015",
+                             "sample":  "Sample For iPhone/iPad\nSearch Term: 351440824220xxxx\nProduct Description: iPhone 12\nConfig Description: IPHONE 12,NAMM,64GB,BLACK\nConfig Code: 0DXP\n\nSample For Macbook/iMac\nSearch Term: HNHQWXxxxx\nProduct Description: MacBook Air (15-inch, M5)\nConfig Description: MBA 15.3 SLV/10C GPU/16GB/1TB\nConfig Code: 0067VL\nCto Configuration: APPLE M5 CHIP WITH 10C CPU, 10C GPU\nFORCE TOUCH TRACKPAD\n1TB SSD STORAGE\nTOUCH ID\nPLACEHOLDER 1\nB955X,40W/60W DPS,J815\nPLACEHOLDER 2\nNO PRO APPS PREINSTALLED\nTWO THUNDERBOLT 4 PORTS\nMAC OS LOC MAPPING\n40W DYNAMIC POWER ADAPTER WITH 60W MAX\nLIQUID RETINA DISPLAY WITH TRUE TONE\nNO LOGIC PRO PREINSTALLED\nPLACEHOLDER 3\nMAC OS,J815\nNO FINAL CUT PRO PREINSTALLED\nMACBOOK AIR 15-INCH SILVER\n16GB UNIFIED MEMORY\n10C CPU/10C GPU/16GB/1TB\nKEYBOARD,B,J815\nCOUNTRY KIT,B,J815\nPKG,THIN B,B955X,J815 (US/CH)"
+                         },
+                         {
+                             "id":  "161",
+                             "name":  "iPHONE MODEL COLOR \u0026 CAPACITY",
+                             "price":  "0.022",
+                             "sample":  "IMEI Number: 35407355160XXXX\nIMEI2 Number: 35407355188XXXX\nModel Description: iPhone 13 Pro 128GB Graphite"
+                         },
+                         {
+                             "id":  "12",
+                             "name":  "IMEI ⇄ SN CONVERT",
+                             "price":  "0.025",
+                             "sample":  "Description: IPHONE 11 PRO MAX MG 64GB DEMO-DEU\nModel: iPhone 11 Pro Max 64GB Midnight Green Cellular [A2218] [iPhone12,5]\nIMEI: 353907100631xxx\nIMEI2: 353907104831xxx\nMEID: 35390710063xxx\nSN: F2LZxxxN70W\nWarranty Status: Out Of Warranty\nEstimated Purchase Date: 2019-09-23 (Optional info)\nReplaced Device: No"
+                         },
+                         {
+                             "id":  "26",
+                             "name":  "APPLE SERIAL INFO",
+                             "price":  "0.01",
+                             "sample":  "Serial Number: DNPV506UHXXX\nModel Desc: iPhone 7 256GB Black SM A1778\nModel Name: iPhone 7\nModel Number: A1778\nModel iD: iPhone9 1\nCapacity: 256GB\nColor: Black\nType: MM\nYear: 2017\nWeek: 31 (31.07 - 06.08)\nFactory: Foxconn  Chengdu  China\n\nService only works with 11 or 12 Chars lenght Serials.\nApple devices sold after 2021 are not supported."
+                         },
+                         {
+                             "id":  "3",
+                             "name":  "iCLOUD ON/OFF",
+                             "price":  "0.02",
+                             "sample":  "354376067505XXX Find My iPhone: OFF\n\n356133314400XXX Find My iPhone: ON\n\nUpdates: Currently Wi-Fi Only devices are not supported on this service."
+                         },
+                         {
+                             "id":  "101",
+                             "name":  "APPLE ACTIVATION STATUS",
+                             "price":  "0.03",
+                             "sample":  "Device: Mac mini\nSerial Number: J9X097YXXX\nSerial Key: 69d7671XXXae32223c1e011b\nCoverage Benefits: Hardware Service, Chat \u0026 Phone Support\nWarranty Type: Limited Warranty\nWarranty Expires: February 4, 2027\nEstimated Purchase Date: February 5, 2026\nActivation Status: Activated\nReplaced Device: No\nTemp Coverage: No\nOpen Repair: No"
+                         },
+                         {
+                             "id":  "88",
+                             "name":  "APPLE ACTIVATION STATUS - PRO",
+                             "price":  "0.04",
+                             "sample":  "Description: IPHONE 16 PRO MAX NATURAL 256GB-SPA\nModel: iPhone 16 Pro Max\nIMEI Number: 3577282xxxxx543\nIMEI2 Number: 357728xxx3232\nMEID Number: 3577282xxxxx54\nSerial Number: DG1MGX2K90\nSerial Key: 67f1addcddd1c2cbed0b5cff\nLost Mode: Yes\nLoaner Device: No\nReplaced Device: No\nAppleCare Eligible: No\nValid Purchase Date: Yes\nActivation Status: Activated\nRegistration Status: Registered\nWarranty Status: AppleCare+\nTelephone Technical Support: Active\nTelephone Technical Support Expires In: 1 Year, 5 Months and 15 Days\nTelephone Technical Support Expiration Date: 2026-09-22\nRepairs and Service Expires In: 1 Year, 5 Months and 14 Days\nRepairs and Service Expiration Date: 2026-09-21\nEstimated Purchase Date: 2025-09-22\nAppleCare Offer Conversion Date: 2026-09-24\nAppleCare Estimated Expiration Date: 2026-09-22\nAppleCare Agreement Code: 100XXX3190XXX\nAppleCare Agreement Number: 3264XXX160XXX"
+                         },
+                         {
+                             "id":  "152",
+                             "name":  "APPLE WARRANTY STATUS - BY SERIAL",
+                             "price":  "0.03",
+                             "sample":  "Serial Number: HXJKX2Yxxxx\nProduct: MacBook Air (M1,2020)\nCoverage: AppleCare+\nExpires: Expires September 11, 2026\nAppleCare+: Yes\nTheft \u0026 Loss: No\nDevice Cohort: NOT_ELIGIBLE\nCoverage Items: Accidental Damage Protection, Hardware Service, 24/7 Priority Access\nAgreement No: 325675240000"
+                         },
+                         {
+                             "id":  "81",
+                             "name":  "APPLE MDM STATUS",
+                             "price":  "0.22",
+                             "sample":  "SAMPLE MDM DISABLED:\nIMEI Number: 356079095896xxx\nSerial Number: F4HX87GMxxx\nMDM Lock: OFF\n\nSAMPLE MDM ACTIVE:\nIMEI Number: 356079095896xxx\nSerial Number: F4HX87GMxxx\nMDM Lock: ON"
+                         },
+                         {
+                             "id":  "40",
+                             "name":  "APPLE MDM \u0026 iCLOUD STATUS",
+                             "price":  "0.23",
+                             "sample":  "Serial Number: HXJKL28P2XXX\nModel Name: MacBook Air (M1,2020)\nWarranty Code: AppleCare Protection Plan\nPurchase Date: 2023-07-25\nFMI Lock: Yes\nMDM Lock: Yes"
+                         },
+                         {
+                             "id":  "110",
+                             "name":  "MACBOOK \u0026 iMAC iCLOUD ON/OFF STATUS",
+                             "price":  "0.15",
+                             "sample":  "Model: iPad (5th generation) Wi-Fi 32GB Space Gray [A1822] [iPad6,11]\nSerial Number: GCGVXXDHLF9\nWarranty Status: Out Of Warranty\nPurchase Date: 2017-11-04\niCloud Lock: ON"
+                         },
+                         {
+                             "id":  "66",
+                             "name":  "iPHONE \u0026 MAC iCLOUD CLEAN/LOST STATUS",
+                             "price":  "0.17",
+                             "sample":  "Model: iPad (5th generation) Wi-Fi 32GB Space Gray [A1822] [iPad6,11]\nSerial Number: GCGVXXDHLF9\nWarranty Status: Out Of Warranty\nPurchase Date: 2017-11-04\niCloud Lock: ON\niCloud Status: Clean"
+                         }
+                     ]
+    },
+    {
+        "category":  "Premium Tools \u0026 Services",
+        "count":  3,
+        "services":  [
+                         {
+                             "id":  "94",
+                             "name":  "MDM LOCK BYPASS (MAX IOS 26) - iPHONE/iPAD",
+                             "price":  "16.0",
+                             "sample":  "iActivate Bypass MDM Profile for iPhone / iPad — All Models \u0026 Max iOS 26\n\nFor devices you legally own — for example handsets bought in volume from\ncarriers or at auction. Temporary bypass only; it does NOT permanently\nremove the management profile. By ordering you confirm you are the legal\nowner and may be asked for proof (invoice or auction record).\n\nHow to use:\n1. Connect the device to a computer and run the iActivate software first.\n2. After the tool completes device verification, place the order with the IMEI or SN.\n\nDownload for Windows: https://iactivate.host/download-software-win\nDownload for MacOS:   https://iactivate.host/download-software\n\nOnce paid, you can use the software to bypass the same device unlimited times.\n\nGoverned by Terms clause 2.3a (owner-only services)."
+                         },
+                         {
+                             "id":  "160",
+                             "name":  "MDM LOCK BYPASS (IOS 27) - iPHONE/iPAD",
+                             "price":  "20.0",
+                             "sample":  "iActivate Bypass MDM Profile for iPhone / iPad — All Models \u0026 Max iOS 27\n\nFor devices you legally own — for example handsets bought in volume from\ncarriers or at auction. Temporary bypass only; it does NOT permanently\nremove the management profile. By ordering you confirm you are the legal\nowner and may be asked for proof (invoice or auction record).\n\nHow to use:\n1. Connect the device to a computer and run the iActivate software first.\n2. After the tool completes device verification, place the order with the IMEI or SN.\n\nDownload for Windows: https://iactivate.host/download-software-win\nDownload for MacOS:   https://iactivate.host/download-software\n\nOnce paid, you can use the software to bypass the same device unlimited times.\n\nGoverned by Terms clause 2.3a (owner-only services)."
+                         },
+                         {
+                             "id":  "245",
+                             "name":  "XIAOMI MI ACCOUNT REMOVE - EUROPE",
+                             "price":  "16.0",
+                             "sample":  "XIAOMI MI ACCOUNT REMOVE SERVICE [ONLY EUROPE] [CLEAN] via IMEI or LOCK CODE\n\nFor the legal owner only — removal is submitted as an official request to Xiaomi.\nProof of ownership may be requested.\nThis is an authorised account removal through the manufacturer\u0027s own channel, not a security bypass.\nGoverned by Terms clause 2.3a.\n\nSupported: - Europe devices from any carrier.\n- Mi account lock only.\n- Only Clean Mode devices.\n\nNot supported: - Lost mode devices.\n- Google Lock.\n\nHow to get Lock Code: 1 - CONNECT DEVICE TO INTERNET VIA WI-FI\n2 - PRESS 10 TIMES \"PADLOCK\" AND LOCK CODE WILL BE GENERATED UNDER THE TAB \"OPEN WIFI SETTINGS\""
+                         }
+                     ]
+    },
+    {
+        "category":  "Status Check Services",
+        "count":  13,
+        "services":  [
+                         {
+                             "id":  "65",
+                             "name":  "AT\u0026T USA STATUS \u0026 UNLOCK",
+                             "price":  "0.40",
+                             "sample":  "AT\u0026T USA Status Check: Blacklist / Barred / Contract / Fraud Check + Unlock Service\n\n99% IMEI results are instant to 10 minutes, There is small 1% when some IMEI\u0027s will get results in 24-48 hours as they take from AT\u0026T side to be replied.\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "16",
+                             "name":  "T-MOBILE USA STATUS - PRO",
+                             "price":  "0.05",
+                             "sample":  "IMEI Number: 353289077942xxx\nESN Status: BLOCKED\nBlacklist Reason: Blocked for non-payment\nBlacklist Date: 2016-07-17 05:21:42-07:00\n\nIMEI: 35279071850XXX\nModel Name: iPhone 11\nModel Brand: Apple\nESN Status: STOLEN\nSystem Message: Reported stolen or not delivered by a T-Mobile customer\n\nIMEI: 35279071850XXX\nModel Name: iPhone 11\nModel Brand: Apple\nESN Status: Clean"
+                         },
+                         {
+                             "id":  "21",
+                             "name":  "CRICKET USA STATUS - PRO",
+                             "price":  "0.15",
+                             "sample":  "IMEI: 352889119421XXX\nModel: iPhone XR (A1984)\nNT Compatible: Yes\nCurrently Blocked: No\nFuture Blocked: No\nAuthorized: Yes\nSIM-Locked: Yes\nStatus: Eligible for unlock.\n\nIMEI: 359824134713XXX\nManufacturer: Apple\nModel: iPhone 12 (A2172)\nUnlock Mechanism: Apple\nTrustonic Device: No\nMessage: Imei found in stolen list\nStatus: Lost or stolen.\n\nIMEI: 354628708140XXX\nManufacturer: Apple\nModel: iPhone 11 (A2111)\nActivation Date: 2023-07-26\nUnlock Mechanism: Apple\nTrustonic Device: No\nNT Compatible: Yes\nCurrently Blocked: No\nFuture Blocked: No\nAuthorized: Yes\nSIM-Locked: Yes\nStatus: Eligible for unlock in 147 days.\n\nIMEI: 352387286007XXX\nManufacturer: Samsung\nModel: Galaxy A32 5G\nCurrently Blocked: No\nFuture Blocked: No\nAuthorized: Yes\nSIM-Locked: No\nStatus: Device locked by myCricket app."
+                         },
+                         {
+                             "id":  "232",
+                             "name":  "VERIZON USA STATUS - PRO",
+                             "price":  "0.07",
+                             "sample":  "Description: iPhone 16 Pro ROW\nModel: IPHONE16 PRO GLOBAL 256GB\nDevice Type: 5G SMARTPHONE\nIMEI: 358579645450xxxx\nIMEI2: 358579646971xxx\nEID: 89049032007408882600197xxx6420\nPart Number: MYMG3LL/A\nProduct ID: DEV21412103\nOS Type: Apple iOS\nNon Pay: No\nRestricted: No\nLost or Stolen: No\nPSIM Capable: No\nESIM Capable: Yes\n5G Compatible: Yes\nCarrier Locked: Yes\nCarrier Lock: No\nFMiP Locked: Yes\nESN Status: Clean\nDevice Status: This device is carrier locked\n\nModel: APPLE IPHONE 13 (A2482)\nProduct: IP13 MDN 128 PP\nDevice Type: 5G SMARTPHONE\nIMEI: 35826027003xxxx\nIMEI2: 3582602708xxxx\nEID: 8904903200700888260xxxx611\nPart Number: MMM63LL/A\nOS Type: Apple iOS\nPIB Lock: Yes\nRestricted: Yes\nLost or Stolen: No\n5G Compatible: Yes\nESN Status: Blocked\nDevice Status: This device is restricted on Verizon network\nError Message: Restricted the prepay for this device.\nError Detail: This device can only be used for prepay service."
+                         },
+                         {
+                             "id":  "230",
+                             "name":  "XFINITY USA STATUS - PRO",
+                             "price":  "0.08",
+                             "sample":  "Manufacturer: Apple\nFind My Device Status: ENABLED\nimei: 351906514310823\nProduct Code: a2632-iphone-14-plus\nName: iPhone 14 Plus\nSlug: iphone-14-plus\nCategory: DEVICE\nIs5 G Capable: true\nSubcategory: Phone\nDate Added: 2022-09-08T12:30:00.000Z\nRank: 28\nBrand: Apple\nBrand Code: APL\nDevice O S: iOS\nDescription: iPhone 14 Plus. Think big with a larger 6.7-inch display¹ and all-day battery life.² Capture stunning photos in low light and bright light with the new dual-camera system. Get peace of mind with groundbreaking safety features.\n0: ONLINE\n1: RETAIL_INSTORE\n2: RETAIL_SHIP\n3: TELESALES\nalternateImei: 35190651419xxxx\nSku: 35190651419xxxx\nXm Sku: 35190651419xxxx\nEligible Status: NO\nReason: Device is a blacklisted device\nCode: BYO1500\nReason: LTE DEVICE\nCode: BYO1300\nimeiCapability: ESIM\nalternateImeiCapability: ESIM\nManufacturer Name: APPLE\nDual Sim: true\nEsimcapability Status: CONFIRMED\nMessage: Too Many Requests\nRequires Sim: true\nModel: iPhone 14 Plus (A2632)\nManufacturer: Apple\nMarketing Name: iPhone 14 Plus\nIs G S M: true\nE S I M Compatible: true"
+                         },
+                         {
+                             "id":  "231",
+                             "name":  "CSPIRE USA STATUS - PRO",
+                             "price":  "0.08",
+                             "sample":  "Unlock Call Success: true\nIs Already Unlocked: false\nSuccess Status Description: This device is locked. Click Unlock Device to submit your unlock request.\nError: This device is locked by the current carrier.\nIncompatible Features To Be Removed: true\nEsim Capable: true\nCurrent Device Esim Capable: true\nEid Required: true\nNon Cspire Device: false\nIs Mvno: false\nIs Coamable: false\nIs Swapable: false\nIs Eligible For Sim Purchase: false\nSearch By: cspireESN\nSearch For: 350278023269xxx\nNumber Found: 0\nIs AppleCare Covered: false\nCode: NO_SALE_DEVICE_NON_CS_WITH_GSMA_TAC_DEVICE\nDescription: The device cannot be sold. This is a 3rd carrier device with a mapping csn into our system.\nCode: CARRIER_LOCKED\nIs Device Compatible: false\nMessage: Tap \"Learn More\" to find out how to unlock your device with your current carrier.\nTitle: Your device is C Spire Switch compatible but cant be used yet.\nHas Account Password: false\nSerial Number: 350278023269xxx\nIs VoLTE Compatible: true\nNetwork Type: LTE\nCarrier: CSPIRE\nManufacturer Name: APPLE\nIs Dpp Active: false\nIs Esim Device: true\nIs Cspire Device: false\nCSN: NCS-IPH15PM\nIs Available For Sale: false\nIs Prepaid Subsidy: false\nIs Active In Billing System: false\nIs Device Eligible For Activation: true\nDch Id: 501118\nItem Name: iPhone 15 Pro Max A2849\nIs Wearable: false\nIs Carrier Unlock: false\nSuccess: false"
+                         },
+                         {
+                             "id":  "220",
+                             "name":  "TRACFONE USA STATUS - PRO",
+                             "price":  "0.06",
+                             "sample":  "IMEI: 355140117159***\nType: SMARTPHONE\nPart No: TFBLB130DC3PWP\nDevice Status: PAST DUE\nSim Carrier: VZW\nSim Status: SIM EXPIRED\nSim Required: Yes\nReserved Line: No\nSafeLink Plan: No\nIs National Retail: Yes\nZip Code: 66614\nDealer Name: TARGET CORPORATION - HARDWARE\nActivation Date: 02-MAY-22\nMessage: 11023 - Device is already registered"
+                         },
+                         {
+                             "id":  "6",
+                             "name":  "WW BLACKLIST STATUS - PRO",
+                             "price":  "0.12",
+                             "sample":  "IMEI: 35541607819xxxx\nModel: APPLE IPHONE 6S (A1688)\nBlacklist Status: CLEAN\nBlacklisted By: O2 (UK) LIMITED\nBlacklisted On: 2017-08-19 11:25:35\nBlacklisted Country: UNITED KINGDOM\nRemoved By: O2 (UK) LIMITED\nRemoved On: 2017-12-02 09:34:34\nRemoved Country: UNITED KINGDOM\n\nIMEI: 353890109232XXX\nModel: Apple iPhone 11 Pro Max (A2161)\nModel Number: iPhone 11 Pro Max (A2161)\nManufacturer: Apple\nBlacklist Status: CLEAN\nBlacklisted By: T-Mobile USA, Inc\nBlacklisted On: 2020-05-31 21:48:47\nBlacklisted Country: United States\nRemoved By: T-Mobile USA, Inc\nRemoved On: 2020-06-02 20:48:50\nRemoved Country: United States\nLast Activation Country: United States"
+                         },
+                         {
+                             "id":  "54",
+                             "name":  "WW BLACKLIST STATUS",
+                             "price":  "0.04",
+                             "sample":  "IMEI: 359205070912xxx\nModel Name: Apple iPhone 7 (A1778)\nModel Number: iPhone 7 (A1778)\nManufacturer: Apple Inc\nBlacklist Status: CLEAN\n\nIMEI: 353049097681xxx\nModel Name: Apple iPhone X (A1865)\nModel Number: iPhone X (A1865)\nManufacturer: Apple Inc\nBlacklist Status: BLACKLISTED"
+                         },
+                         {
+                             "id":  "24",
+                             "name":  "BRAZIL BLACKLIST STATUS",
+                             "price":  "0.09",
+                             "sample":  "IMEI: 35351060675xxx\nResult: The device (IMEI) has an indication of use restriction (theft / loss) and is liable to be blocked in the Operators\u0027 networks.\nSearch Date: 07/06/2026 03:46:16\nAccountable: United States\n\nIMEI: 35222870023xxx\nResult: Not registered in base\nSearch Date: 07/06/2026 03:35:33\n\nIMEI: 35038775933xxx\nResult: Prevented\nSearch Date: 07/06/2026 03:31:41\nAccountable: Claro"
+                         },
+                         {
+                             "id":  "20",
+                             "name":  "KOREA BLACKLIST STATUS",
+                             "price":  "0.02",
+                             "sample":  "IMEI: 356497103969xxx\nManufacturer: Apple\nModel Code: iPhone SE (A2296)\nModel Name: iPhone SE (2nd generation)\nBlacklist Status: Clean\n\nIMEI: 353730793828xxx\nManufacturer: APPLE\nModel Code: IPHONE 14 PRO\nModel Name: A2890\nBlacklist Status: Blacklisted\nBlacklist Reason: Registered as lost or stolen\nBlacklist By: LG [LG U+] 1544-0010"
+                         },
+                         {
+                             "id":  "32",
+                             "name":  "JAPAN BLACKLIST STATUS",
+                             "price":  "0.08",
+                             "sample":  "IMEI: 35730009644XXX\nManufacturer: Apple\nModel Code: iPhone XS MAX (A2102)\nModel Name: iPhone XS Max\nUQ Status: Not Found\nKDDI Status: Not Found\nMineo Status: Not Found\nDocomo Status: Blacklist\nRakuten Status: Not Found\nSoftbank Status: Not Found"
+                         },
+                         {
+                             "id":  "31",
+                             "name":  "AUSTRALIA BLACKLIST STATUS",
+                             "price":  "0.01",
+                             "sample":  "35863407283xxxx Your IMEI Number is currently unblocked\n\n35863407283xxxx Your IMEI Number is currently blocked by Optus since 17 December 2021 3:04 PM."
+                         }
+                     ]
+    },
+    {
+        "category":  "Generic Services",
+        "count":  24,
+        "services":  [
+                         {
+                             "id":  "34",
+                             "name":  "ASUS INFO",
+                             "price":  "0.06",
+                             "sample":  "Model Name: ZenFone Max Pro(M1)(ZB601KL)\n\nModel Series: ZenFone\n\nModel Number: ZB601KL-4D002IN\n\nPart Number: 90AA00T3-M00330\n\nSpec: AS ZB601KL 4D/636/64G/4G\n\nProject: ZB601KL\n\nIMEI: 35984909734xxxx\n\nIMEI2: 35984909734xxxx\n\nSerial: J8AAGF09238xxxx\n\nBoard Serial (ISN): SA188330103xxxx\n\nWiFi MAC: 04922628xxx\n\nBluetooth MAC: 04922628xxx\n\nSoftware Version: ZQL1650_S318_USR_201807122000_new_master\n\nStorage/RAM: R1.0(64G/D)/IN-CKD(B7\u0026B20)\n\nBattery: COS/CA486586G/1S1P/3.85V/19.2W\n\nDisplay: (CKD)full lamination_OC\n\nAdapter: ADAPTER 10W 5V/2A WH (USB)\n\nDistributor: FLIPKART INDIA PRIVATE LIMITED\n\nManufacture Country: Indonesia\n\nPurchase Country: India\n\nWarranty Provider: ASUS\n\nWarranty Territory: Local(INDIA)\n\nWarranty Period: 12 months\n\nService Model: Carry In\n\nService Region: APAC\n\nWarranty Status: Expired\n\nWarranty Start Date: 2018-11-02\n\nWarranty End Date: 2019-11-02\n\nParts: ComponentPart NameDescriptionSerialADAPTERADAPTER 10W 5V/2A WH (USB)AOHAI/A172-050200U-IN2(IN)0A001-00380900832A16488BATTERYZB602KL AIR/COS POLY/C11P1706COS/CA486586G/1S1P/3.85V/19.2W0B200-02870200M00V10830KLWNSYS04080(CKD)Camera_13+5HQ202069430028624007B5OF01SYS04080(CKD)Camera_Single 8M_QG_LSHQ20207052002871307446CH01MECH13010(CKD)Front cover(for 8/16M)HQ2070457000288013199CCW00MECH13010(CKD)Battery cover_4D_blueHQ2074556800280723HL024214DISPLAY18020(CKD)full lamination_OCHQ23201161002880601033TX01MAIN BOARDZB601KL MB._4G/SDM636(1.8G)R1.0(64G/D)/IN-CKD(B7\u0026amp;B20)SA1883301032796SUB BOARDZB601KL SUB_BD.R1.0(IN-CKD)SA188330201FDA9"
+                         },
+                         {
+                             "id":  "23",
+                             "name":  "ACER INFO",
+                             "price":  "0.06",
+                             "sample":  "Search Term: 35245306595xxxx\nCategory Id: C27S\nWarranty Validity Flag: True\nId Warranty: G44S\nWarranty Expiry Date: 2016-02-23T00:00:00\nPurchase Date: 23/02/2015\nWarranty Classification: Out of Warranty\nSerial Number: HMHJLSN0024500623Cxxx\nIMEI: 35245306595xxxx\nSNID: 45002514xxx\nWarranty Buffer Months: 3\nWarranty From: True\nProduct Line Desc: Smart Handheld\nCountry Of Sale: Indonesia\nProduction Date: 2014-12-25T00:00:00\nSystem Purchase Date: 2015-02-23T00:00:00\nWarranty Months: 12\nWarranty I D: G44S\nWarranty Desc: 1 Year Carry In\nWarranty Type: G44S\nWarranty Validation: 1\nError Description: Part details not available\nAsset Source: 4\nAuto Approval Disabled Failure Codes: BT06,BT08,DP25,SH01,SH2,SH3,SH4,SH5,SH6"
+                         },
+                         {
+                             "id":  "73",
+                             "name":  "HONOR INFO",
+                             "price":  "0.08",
+                             "sample":  "Model Full Description: HONOR 50 8GB+256GB Emerald Green Single Card Claro Ver. US Charger\nSearch Term: 8628020501xxxx\nIMEI: 8628020501xxx\nSN: AL9XVB1A2300xxx\nItem Code: 5109AAXL\nOffer Code: OFFE00270669\nPurchase Country: Guatemala\nWarranty Status: In Warranty\nWarranty Start Date: 2021/12/3\nWarranty End Date: 2023/12/5\n\nWarranty Type: 1 Year Device Warranty\nValid in Country: Guatemala\nService Code: BS03000001\nBind Date: 2022/2/10\nStart Date: 2021/12/3\nEnd Date: 2022/12/4\nValid Days: 366\n\nWarranty Type: 7 Day Device Return\nValid in Country: Guatemala\nService Code: BS01000001\nBind Date: 2022/2/10\nStart Date: 2021/12/3\nEnd Date: 2021/12/10\n\nWarranty Type: 7 Day Device Replacement\nValid in Country: Guatemala\nService Code: BS02000002\nBind Date: 2022/2/10\nStart Date: 2021/12/3\nEnd Date: 2021/12/10\n\nWarranty Type: HONOR Extended Warranty 12M (Phone) LA high\nCoa Code: 9221743\nService Code: ES01000473\nSeries Code: CMCG10000072\nPrivi Id: 653636903907815424\nBind Date: 2022/2/10\nStart Date: 2022/12/4\nEnd Date: 2023/12/5\nValid Days: 366\n\nWarranty Type: HONOR Screen Protection 3M 1 Times (Phone) LA\nCoa Code: 9221742\nService Code: ES02000549\nSeries Code: CMCG10000072\nPrivi Id: 653657037032534016\nBind Date: 2022/2/10\nStart Date: 2021/12/3\nEnd Date: 2022/3/6\nValid Days: 93"
+                         },
+                         {
+                             "id":  "86",
+                             "name":  "SPARX INFO",
+                             "price":  "0.01",
+                             "sample":  "IMEI: 35490594016xxx\nManufacturer: SPARX\nModel Code: EDGE 20 PRO\nWarranty Status: Active\nWarranty Start Date: 29 March 2024\nWarranty End Date: 28 March 2025"
+                         },
+                         {
+                             "id":  "56",
+                             "name":  "DOOGEE INFO",
+                             "price":  "0.05",
+                             "sample":  "IMEI1: 3561744300203xx\nIMEI2: 3561744300203xx\nManufacturer: KVD International Group Limited\nModel Name: S96Pro\nProject Code: boruizhiheng6785_10.0_S96Pro_en-US_other\nSource Version: S9S88A7.DGE.DOOGEE.EEA.HB.HJ.AYYDVFAZ.0917.V3.01_20200917-1905\nTarget Version: S9S88A7.DGE.DOOGEE.EEA.HB.HJ.AYYDVFAZ.0917.V3.01_20200917-1905\nSold to Continent: North America\nSold to Country: United States\nSold to Region: California\nActivation Date: 2021-02-05 10:00:26"
+                         },
+                         {
+                             "id":  "15",
+                             "name":  "HUAWEI INFO",
+                             "price":  "0.10",
+                             "sample":  "Model Description: HUAWEI P30 lite 6GB+256GB Peacock Blue Single Card Telcel Ver. American Plug-No Sim Lcok\nItem Description: LTE Cellular Phone,Marie-L03BX,LTE/WCDMA/GSM Handset,Peacock Blue,Telcel,Without Simlock,With Sleeve\nModel Code: Marie-L03BX\nExternal Code: MAR-LX3Bm\nDevice Type: Commercial Unit\nIMEI: 865149040590XXX\nS/N: X9F4C19C16001XXX\nPCBA BARCODE: 4C7DCS19CB1192XXX\nMEID HEX 14: 86514904059XXX\nIMEI: 865149040590XXX\nITEM CODE: 51094XUW-XXX\nMEID HEX: 865149040590XXX\nWIFI MAC: 10E9531D5XXX\nBT MAC: 10E9531D6XXX\nCustomer Code: CIS119XXX\nCountry Name: Mexico\nCompany Name: America Movil S.A.B. DE C.V.\nOffer Code: OFFE00116XXX\nContract Code: 00048419038XXX\nLevel1 Code: PDCG9335XXX\nLevel3 Code: PDCG8008XXX\nWarranty Valid In: Mexico\nWarranty Status: Out of Warranty\n\nWarranty Details:\nWarranty Type: 1 Year Warranty\nWarranty Status: OOW\nValid in Country: MX\nService Code: BS03000001\nStart Date: 2020/6/9\nEnd Date: 2021/6/10\nBind Date: 2020/7/28\nOrder Date: 2020/1/10\nShipment Date: 2020/1/10\nDelivery Date: 2020/6/9\nActivation Date: 2019/12/16\n\nWarranty Type: 30 Day Device Return\nValid in Country: MX\nService Code: BS01000003\nStart Date: 2020/6/9\nEnd Date: 2020/7/9\n\nWarranty Type: 30 Day Device Replacement\nValid in Country: MX\nService Code: BS02000002\nStart Date: 2020/6/9\nEnd Date: 2020/7/9"
+                         },
+                         {
+                             "id":  "22",
+                             "name":  "LENOVO INFO",
+                             "price":  "0.06",
+                             "sample":  "Product Name: Lenovo Phone A2016b30 MX 8G BL GL AT_T\nIMEI: 862569038355xxx\nIMEI2: 862569038355xxx\nSerial: HA0PLLxx\nModel: Moto A2016b30\nMachine Type: PA4U\nProduct Id: PA4U0028MX\nMTM: PA4U0028MX\nTransceiver: PA4U\nShip Date: 2016-10-30\nShip to Country: Mexico\nSold to Country: Mexico\nColor: Black\nWarranty Remaining: 0 days\nWarranty Start: 2016-10-30\nWarranty End: 2017-11-08\n\nWarranty Information: Ship\nPhone: Out Of Warranty 2016-10-30 to 2017-11-08\nCharger/USB Cable: Out Of Warranty 2016-10-30 to 2017-11-08\nBattery: Out Of Warranty 2016-10-30 to 2017-11-08\nEarphone: Out Of Warranty 2016-10-30 to 2017-11-08"
+                         },
+                         {
+                             "id":  "43",
+                             "name":  "KYOCERA INFO",
+                             "price":  "0.05",
+                             "sample":  "Manufacturer: Kyocera\nModel Name: DuraXV Extreme E4810\nIMEI: 015588002408xxx\nCarrier: VerizonXX\nPhone Category: Feature Rugged\nLimited Warranty Period: 730"
+                         },
+                         {
+                             "id":  "80",
+                             "name":  "SAMSUNG INFO",
+                             "price":  "0.06",
+                             "sample":  "Search Term: 35077953258XXXX\nIMEI1: 35077953258XXXX\nSerial Number: RFCTB1FXXXX\nModel Number: SM-S906UZKAATT\nModel Name: SM-S906U\nModel Desc: Galaxy S22+ 5G\nProduction Date: 24 November 2022\nWarranty Until: 24 November 2023\nWarranty Status: Warranty Active\nCarrier: AT\u0026T United States"
+                         },
+                         {
+                             "id":  "17",
+                             "name":  "ALCATEL INFO",
+                             "price":  "0.10",
+                             "sample":  "Description: One Touch Pixi 4 (6) 4G\nModel: Alcatel 5098S\nIMEI: 0146480006593xx\nIMEI2: 0146480006593xx\nSerial: 18KE07CP2EA01xx\nProvider ID: 5098S-2BALUxx\nBT MAC: CCFD17C582xx\nWI-FI Mac: CCFD17B221xx\nPart Number: SAA1FA4AA1xx\nPurchase Country: United States\nSoftware Version: D36\nWarranty Status: Out of Warranty\nWarranty End Date: 21-10-2018"
+                         },
+                         {
+                             "id":  "13",
+                             "name":  "MOTOROLA INFO",
+                             "price":  "0.08",
+                             "sample":  "Product Name: MOTO Phone XT1944-3 MX 2+16 GR SSL AT\u0026T\nIMEI: 354122090334xxx\nSerial: TF3KJG2G9R\nModel: Moto XT1944-3\nMachine Type: PACD\nProduct Id: PACD0000MX\nMTM: PACD0000MX\nTransceiver: SA78C28282\nShip Date: 2018-04-23\nShip to Country: Mexico\nSold to Country: Mexico\nWarranty Remaining: 19 days\nWarranty Start: 2018-04-23\nWarranty End: 2019-04-22\n\nWarranty Information: Ship\nPhone: In Warranty 2018-04-23 to 2019-04-22\nCharger/USB Cable: In Warranty 2018-04-23 to 2019-04-22\nBattery: In Warranty 2018-04-23 to 2019-04-22\nEarphone: In Warranty 2018-04-23 to 2019-04-22"
+                         },
+                         {
+                             "id":  "75",
+                             "name":  "VIVO | IQOO INFO",
+                             "price":  "0.02",
+                             "sample":  "IMEI Number: 8685190632XXXX\nManufacturer: Vivo Mobile Communication Co Ltd\nModel Name: V25 Pro 8G+128G\nModel Color: Sailing Blue\nContract Status: Not Active\nWarranty Expiration Date: 23/10/2023"
+                         },
+                         {
+                             "id":  "42",
+                             "name":  "GOOGLE PIXEL INFO",
+                             "price":  "0.12",
+                             "sample":  "Desc: Pixel 3a 64GB Just Black US VZ\nModel: Pixel 3a (64GB Just Black US VZ)\nModel Number: GA00652-US\nIMEI: 3596500909840xx\nSerial: 93WAY0H1xx\nPurchase Country: United States\nWarranty Status: Expired\nWarranty Start Date: 13 May 2019\nWarranty End Date: 14 May 2020\nDevice Protection End Date: 08 May 2021\nDevice Age: 1 Years, 0 Months, 0 Days"
+                         },
+                         {
+                             "id":  "233",
+                             "name":  "NOTHING PHONE INFO",
+                             "price":  "0.03",
+                             "sample":  "Search Input: 357269622300xxx\nType: phone\nSerial: 00117649P0xxx\nSku: A10400117\nPurchase Country: India\nProduct Model: CMF Phone 1\nProduct Configuration: IN version 6+128GB\nProduct Color: Light Green\nIMEI2: 357269622xxxxx\nIMEI1: 357269622xxxx\nActivation Date: 2025-03-26"
+                         },
+                         {
+                             "id":  "1",
+                             "name":  "SAMSUNG INFO - PRO",
+                             "price":  "0.10",
+                             "sample":  "Search Term: 35212672410XXXX\nIMEI1: 35212672410XXXX\nIMEI2: 35299219410XXXX\nSerial Number: RFCT703XXXX\nDO Number: 711375XXXX(C4B0-1C)\nSKU: SM2G990BLGDEUE\nManufacturer: Samsung Electronics Vietnam (SEV), Bac Ninh City\nFull Name: MOBILE SM-G990B LIGHT GREEN EUE\nModel Number: SM-G990BLGDEUE\nModel Name: SM-G990B/DS\nModel Desc: Galaxy S21 FE 5G\nProduction Date: 05 July 2022\nWarranty Until: 05 July 2023\nWarranty Status: Warranty Active\nSales Buyer Code: ORO\nSales Buyer Name: Orange Romania\nCarrier: Open\nSold By Country: Austria\nShip To Country: Romania\nSold Date: 05 July 2022\nShip Date: 13 July 2022"
+                         },
+                         {
+                             "id":  "203",
+                             "name":  "BRAND \u0026 MODEL INFO",
+                             "price":  "0.004",
+                             "sample":  "IMEI: 352073065544xxx\nBrand: Apple Inc\nModel: Apple iPhone 6 (A1586)"
+                         },
+                         {
+                             "id":  "87",
+                             "name":  "UNITY CELLECOR INFO",
+                             "price":  "0.01",
+                             "sample":  "Material Code: 9010133132\nMaterial Name: C9 Plus, Black, Complete Unit\nInvoice Date: 2024-05-07 18:30:00\nSerial No1: 356488169946xxx\nSerial No2: 356488169946xxx\nWarranty End Date: 2025-05-07 18:30:00\nWarranty Status: Under Warranty\nWarranty Code: 700000001\nWarranty Days: 365\nCustomer Name: SAJI PAUL\nAddress1: ERANAKULAM\nAddress2: Vadayampady p o ,Puthencruz\nCity ID: 1330\nState Code: KR\nCountry Code: IN\nPincode: 682016\nMobile No: 9447147xxx\nCity Name: Cochin\nState Name: Kerala\nCountry Name: INDIA\nIs Abandoned: True\nIs Activated: 1\nIs Bundled With Sale: False\nWarranty Start Date: 2024-05-07 18:30:00\nWarranty Status: Under Warranty\nAccesory Warranty Status: Out Warranty\nDAP Applicable: Yes\nDOA Applicable: No\nCall Code: CEL15872260000048\nRepair Date: 2024-12-20 10:13:16\nRepaired By: EXCLUSIVE CARE\nSymptom Desc: Display Blank Display\nDefect Desc: LCD Failure\nRepair Desc: Swapped-DAP"
+                         },
+                         {
+                             "id":  "37",
+                             "name":  "SIM ICCID | IMSI INFO",
+                             "price":  "0.00",
+                             "sample":  "IMSI: 2780112904889831\nNetwork: Vodafone\nCountry: Malta\n\nICCID: 8901260752799476464\nNetwork: TMobile\nCountry: United States"
+                         },
+                         {
+                             "id":  "82",
+                             "name":  "SAMSUNG KNOX GUARD INFO",
+                             "price":  "0.30",
+                             "sample":  "Search Term: 35212672410XXXX\nIMEI1: 35212672410XXXX\nIMEI2: 35299219410XXXX\nSerial Number: RFCT703XXXX\nDO Number: 711375XXXX(C4B0-1C)\nSKU: SM2G990BLGDEUE\nManufacturer: Samsung Electronics Vietnam (SEV), Bac Ninh City\nFull Name: MOBILE SM-G990B LIGHT GREEN EUE\nModel Number: SM-G990BLGDEUE\nModel Name: SM-G990B/DS\nModel Desc: Galaxy S21 FE 5G\nProduction Date: 05 July 2022\nWarranty Until: 05 July 2023\nWarranty Status: Warranty Active\nSales Buyer Code: ORO\nSales Buyer Name: Orange Romania\nCarrier: Open\nSold By Country: Austria\nShip To Country: Romania\nSold Date: 05 July 2022\nShip Date: 13 July 2022\n\nKNOX Lock is disabled:\nKnox Guard: OFF\n\nKNOX Lock is activated:\nKnox Guard: ON\nDevice Id: 641071d4394xxcef9d34a33xx\nKG Version: 1\nKG Company: SQUARETRADE LIMITED\nKG Status: Locked\nKG Message: This device is lost or stolen please contact claimvalidation@squaretrade.com\nKG Email: claimvalidation@squaretrade.com"
+                         },
+                         {
+                             "id":  "55",
+                             "name":  "ZTE | NUBIA | REDMAGIC INFO",
+                             "price":  "0.05",
+                             "sample":  "IMEI: 86994404011xxx\nMSN: 320704805014\nMaterial Code: 126658901004\nBoard Tracking No: 728040814159\nManufacturer: ZTE\nModel Code: ZTE 9000\nModel Name: Blade V 2020\nModel Description: P671F60//ZTE 9000 Mobile Phone(Mexico/Telcel/White/MT6771/4+128G)\nProduct Line: Oversea Mobile Phone\nProduction Date: 2020-04-29 22:20:22\nWarranty Status: Out of Warranty"
+                         },
+                         {
+                             "id":  "45",
+                             "name":  "ITEL | INFINIX | TECNO | SONIM INFO",
+                             "price":  "0.03",
+                             "sample":  "Model Description: Infinix X6838 F1 PALM BLUE IN 256+12 IN\nModel Name: Infinix X6838 256+12\nMarket Model: Infinix NOTE 40X 5G\nMemory: 256+12 GB\nIMEI: 350837594167xxx\nIMEI2: 350837594167xxx\nSerial: 12541314AA130xxx\nVersion Code: N6\nFactory Code: TIPL\nMaterial Code: 10058xxx\nBox No: 43012410192xxx\nInvoice No: GMH2451xxx\nWarranty Status: Active\nWarranty Activation Date: 2024-11-10\nWarranty Expiration Date: 2025-11-10\nActivation Date: 2024-11-10 00:00:00.0\nSales Date: 2024-11-08 00:00:00.0\nBuyer Name: Flipkart India Private Limited\nSold By Country: India\nShip To Country: India\nActivation Country: India"
+                         },
+                         {
+                             "id":  "153",
+                             "name":  "XIAOMI | REDMI | POCO WARRANTY INFO",
+                             "price":  "0.10",
+                             "sample":  "Model Description: Xiaomi 15T Pro Mocha Gold 12GB RAM 256GB ROM\nModel Code: 2506BPN68G\nCodename: klimt\nIMEI: 86932307829XXXX\nIMEI2: 86932307829XXX\nSerial Number: QU545D0XXX\nInternal SN: 68028/F5YXXX\nWiFi MAC: E87EEF5XXX\nPurchase Country: RO\nMade In: ??????\nManufactured: 2025-11-11\nWarehouse In: 2025-11-12 21:13:10\nWarehouse Out: 2026-01-21 19:28:44\nActivated: No\nRepair Eligible: Yes\nRefurbished: No\nBoard Swapped: No\nFactory Firmware: OS2.0.208.0.VOSEUXM\nCarrier Build: klimt.eu.1.1.0021\nPO Number: 4546518000\nBusiness No: 9316775000\nVendor Code: 0000132000\nLCD Serial: HNHBQ581000B4000ABA01K55\nBattery Serial: SLBP5H500017240WMD1E100\nCable Serial: B2632000700003414C00000\nMainboard SN: QU0005D003329\nCPU ID: 0x6fa1f7df000062cb9d227a520012\nSAP Serial: F5YB000250\nBatch ID: 6760051\nB2B Customer Code: 470001\nRecord Last Updated: 2026-01-21 19:29:02\nService History: None\nOrder ID: 12652300024381\nRetail Price: 5700 EUR\nOrder Channel: International Sales-\u003eInternational Sales-Northeast Europe-\u003eInternational Sales-Romania\nOrder Verified: No"
+                         },
+                         {
+                             "id":  "39",
+                             "name":  "OPPO | ONEPLUS | REALME - EUROPE INFO",
+                             "price":  "0.20",
+                             "sample":  "Supported inputs:\n- IMEI or IMEI2 15 Digits. Example: 86773204641xx\n- OnePlus Serial 16 Chars. Example: 9D7XIF8PBYNNMNXX\n- Oppo \u0026 Realme Serial 8 Chars. Example: 6603fdxx\n\nSample Reply:\n\nBrand: OPPO\nModel: A3xPK(4+128)\nModel Description: Mobile phone\nRAM: 4GB\nROM: 128\nIMEI: 8686710721xxxx\nIMEI2: 8686710721xxxx\nPCB: 00233113471229401xxx\nSKU: 11001034xxx\nChip SN: f5ffxxx\nAdaptor SN: D*61140100xxxx1113810\nBattery SN: X*611303000xxxE169554W2\nSoftware Version: V2.9\nProduct Version: VK.5\nPhone Status: Normal Delivery\nProject No: 23311\nMaterial No: 6310xxx004063\nDelivery Date: 2024-11-18 15:19:26\nProduction Date: 2024-10-04 17:31:00\nManufacturing Date: 2024-11-18 09:19:26\nRegistration Date: 2025-07-22 19:19:13\nWarranty End Date: 2026-07-21 19:19:13\nWarranty Validity: 12 months\nPurchase Country: Pakistan"
+                         },
+                         {
+                             "id":  "206",
+                             "name":  "XIAOMI | REDMI | POCO MI LOCK ON/OFF INFO",
+                             "price":  "0.10",
+                             "sample":  "Manufacturer: Xiaomi Communications Co Ltd\nModel Name: Redmi Note 9 Pro\nModel Code: M2003J6xxx\nIMEI Number: 864131057209xxx\nSerial Number: 27957/20VH00xxx\nDescription: Redmi Note 9 Pro Interstellar Grey 6G RAM 128G ROM\nProduct ID: 27957\nPurchase Country: Libya\nProduction Date: 2020-08-27 21:25:27\nActivation Date: 2020-09-11 08:19:21\nMI Activation Lock: ON\nEmail Id Hint: abd***@gmail.com\nPhone Number Hint: +218913****29"
+                         }
+                     ]
+    },
+    {
+        "category":  "iPhone Unlock Services",
+        "count":  22,
+        "services":  [
+                         {
+                             "id":  "98",
+                             "name":  "UK O2 TESCO - CLEAN",
+                             "price":  "2.50",
+                             "sample":  "355313080638xxx - Unlocked\n352978092274xxx - Barred\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "127",
+                             "name":  "UK VODAFONE - CLEAN",
+                             "price":  "8.00",
+                             "sample":  "355313080638xxx - Unlocked\n352978092274xxx - Not supported\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "111",
+                             "name":  "USA C SPIRE - CLEAN",
+                             "price":  "2.00",
+                             "sample":  "IMEI: 3528290611159xx Unlocked\nIMEI: 356117090112782 This iPhone could not be unlocked because it is not a C Spire device.\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "126",
+                             "name":  "JAPAN AU KDDI - CLEAN",
+                             "price":  "4.00",
+                             "sample":  "IMEI: 3561760227820xx Unlocked\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "97",
+                             "name":  "UK EE/ORANGE - PREMIUM",
+                             "price":  "2.00",
+                             "sample":  "355313080638xxx - Unlocked\n352978092274xxx - Barred\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "52",
+                             "name":  "JAPAN SOFTBANK - CLEAN",
+                             "price":  "2.60",
+                             "sample":  "IMEI: 3561760227820xx Unlocked\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "113",
+                             "name":  "EMEA SERVICE - PREMIUM",
+                             "price":  "1.50",
+                             "sample":  "IMEI: 3528290611159xx Unlocked\n\nSupported only Next Tether: Emea Service\nUse Carrier service to make sure device is locked to Emea Service policy.\nNo refund for bad orders!\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "116",
+                             "name":  "JAPAN NTT DOCOMO - CLEAN",
+                             "price":  "2.60",
+                             "sample":  "IMEI: 3561760227820xx Unlocked\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "69",
+                             "name":  "ROMANIA ORANGE - PREMIUM",
+                             "price":  "14.0",
+                             "sample":  "355313080638xxx - Unlocked\n352978092274xxx - In Contract\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "50",
+                             "name":  "PHILIPPINES GLOBE - CLEAN",
+                             "price":  "5.50",
+                             "sample":  "355313080638xxx - Unlocked\n352978092274xxx - Not supported\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "71",
+                             "name":  "ROMANIA VODAFONE - PREMIUM",
+                             "price":  "18.0",
+                             "sample":  "355313080638xxx - Unlocked\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "51",
+                             "name":  "USA AT\u0026T - CLEAN/ACTIVE LINE",
+                             "price":  "8.00",
+                             "sample":  "355313080638xxx - Unlocked\n352978092274xxx - Not supported\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "96",
+                             "name":  "CANADA FIDO/ROGERS - PREMIUM",
+                             "price":  "20",
+                             "sample":  "355313080638xxx - Unlocked\n352978092274xxx - Barred\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "137",
+                             "name":  "AUSTRIA A1 MOBILKOM - PREMIUM",
+                             "price":  "165",
+                             "sample":  "355313080638xxx - Unlocked\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "53",
+                             "name":  "USA CRICKET - CLEAN \u0026 6 MONTHS OLD",
+                             "price":  "6.00",
+                             "sample":  "355313080638xxx - Unlocked\n352978092274xxx - Not supported\n\nService Info:\n- All Cricket iPhones \u0026 Generic Models - Must be activated at least 6 months on Cricket Network.\n- Not Supported:  Blacklisted  / Recently purchased devices or not activated for at least 6 months.\n- Supported: Clean \u0026 Activated for atleast 6+ months\n\nSupport iPhone carriers: - US Cricket Communications LTE Policy\n- US Cricket Communications Locked Activation Policy\n- US Cricket Communications Service Policy\n- US AT\u0026T/Cricket Locked Policy\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "138",
+                             "name":  "AUSTRIA A1 MOBILKOM - OUT OF CONTRACT",
+                             "price":  "115",
+                             "sample":  "355313080638xxx - Unlocked\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "95",
+                             "name":  "CANADA TELUS - CLEAN (UP TO iPHONE 16)",
+                             "price":  "2.00",
+                             "sample":  "355313080638xxx - Unlocked\n352978092274xxx - Barred\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "159",
+                             "name":  "IRELAND HUTCHISON THREE / O2 - PREMIUM",
+                             "price":  "4.00",
+                             "sample":  "355313080638xxx - Unlocked\n352978092274xxx - Not supported\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "132",
+                             "name":  "CLARO ALL COUNTRIES - PREMIUM (iPHONE 14)",
+                             "price":  "59.0",
+                             "sample":  "355313080638xxx - Unlocked\n352978092274xxx - Not Eligible\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "142",
+                             "name":  "CLARO ALL COUNTRIES - PREMIUM (iPHONE 15)",
+                             "price":  "89.0",
+                             "sample":  "355313080638xxx - Unlocked\n352978092274xxx - Not Eligible\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "135",
+                             "name":  "CLARO ALL COUNTRIES - PREMIUM (UP TO iPHONE 13)",
+                             "price":  "47.0",
+                             "sample":  "355313080638xxx - Unlocked\n352978092274xxx - Not Eligible\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "234",
+                             "name":  "USA AT\u0026T - SOLD DATE: 60 DAYS (UP TO iPHONE 14)",
+                             "price":  "28.0",
+                             "sample":  "355313080638xxx - Unlocked\n352978092274xxx - Not supported\n\nSupported Status: - iPhone 15/16 Not Supported\n- DEVICE_SOLD_DATE_60_DAYS\n- We cant unlock your device until 60 days post-purchase\n\nNot Supported Status: - Lost or Stolen\n- Gophone\n- Past Due\n- Under Contract\n- Unpaid Payments\n- Recently Upgraded\n\nNo relock warranty if device is subject to fraud, insurance, scam etc...\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page.\n\nThis service only available to order for clients that make payments using USDT Crypto."
+                         }
+                     ]
+    },
+    {
+        "category":  "Generic Unlock Services",
+        "count":  6,
+        "services":  [
+                         {
+                             "id":  "57",
+                             "name":  "UK O2 - CLEAN",
+                             "price":  "7.50",
+                             "sample":  "355313080638xxx - 62738463\n352978092274xxx - Barred\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "104",
+                             "name":  "CANADA VIDEOTRON",
+                             "price":  "1.00",
+                             "sample":  "IMEI: 35230806170XXXX\nBrand: Samsung\nUnlock Code: 52706804"
+                         },
+                         {
+                             "id":  "115",
+                             "name":  "HTC INTERNATIONAL",
+                             "price":  "2.00",
+                             "sample":  "IMEI: 3547730727799xx\nCode: 77442699\n\nCodes are directly from HTC database, and there is no refund for any reason if codes not work.\nDon\u0027t submit IMEI from device that not ask for unlock code.\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "125",
+                             "name":  "SAMSUNG EUROPE - PREMIUM",
+                             "price":  "18.0",
+                             "sample":  "355313080638xxx - NCK=30697419 MCK=31629737\n352978092274xxx - Not supported\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "134",
+                             "name":  "SAMSUNG UK \u0026 IRELAND - PREMIUM",
+                             "price":  "18.0",
+                             "sample":  "This Service includes All Level of Codes:\nSample:\nNETWORK=45820259 PROVIDER=00000000 SUBPROVIDER=20375127 DEFREEZE=92370584 EXTRA=00000000 EXTRA2=00000000\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         },
+                         {
+                             "id":  "130",
+                             "name":  "SAMSUNG EUROPE - LIMITED COUNTRIES",
+                             "price":  "14.0",
+                             "sample":  "355313080638xxx - NCK=30697419 MCK=31629737\n352978092274xxx - Not supported\n\nNote: This service is not INSTANT!\nResult will be displayed in Order History page."
+                         }
+                     ]
+    }
+]
