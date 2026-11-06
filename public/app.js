@@ -365,7 +365,7 @@
     resultOrderId.textContent = record.orderId && record.mode !== 'sample' ? `Orden #${record.orderId}` : '';
     resultCost.textContent = record.mode === 'sample' ? '$0.00' : record.price ? `Costo: $${record.price}` : '';
 
-    verdictTitle.textContent = verdict.title;
+    verdictTitle.textContent = String(verdict.title || '').replace(/^(EN\s+)?(VERDE|ROJO)\s*·\s*/i, '');
     verdictSubtitle.textContent = verdict.subtitle;
 
     // Hardware identity
@@ -407,6 +407,7 @@
       semaforoSection.hidden = false;
       semaforoGrid.innerHTML = '';
       for (const diag of diagnostics) {
+        const cleanSummary = String(diag.summary || '').replace(/^(EN\s+)?(VERDE|ROJO)\s*·\s*/i, '');
         const card = document.createElement('div');
         card.className = 'semaforo-card';
         card.setAttribute('data-status', diag.status || 'neutral');
@@ -415,7 +416,7 @@
           <div class="semaforo-body">
             <span class="semaforo-label">${escapeHtml(diag.label)}</span>
             <strong class="semaforo-value">${escapeHtml(diag.value)}</strong>
-            <span class="semaforo-summary">${escapeHtml(diag.summary || '')}</span>
+            <span class="semaforo-summary">${escapeHtml(cleanSummary)}</span>
           </div>
         `;
         semaforoGrid.appendChild(card);

@@ -261,7 +261,7 @@ function parseSickwResult(rawResult, serviceMeta, imeiInput) {
       label: 'iCloud / Find My',
       value: combined,
       status: isOff && !isLost ? 'ok' : isOn ? 'fail' : 'warn',
-      summary: isOff && !isLost ? 'VERDE · Desactivado (Libre)' : isLost ? 'ROJO · Modo Perdido (LOST)' : 'ROJO · Cuenta Activa (ON)'
+      summary: isOff && !isLost ? 'Desactivado (Libre)' : isLost ? 'Modo Perdido (LOST)' : 'Cuenta Activa (ON)'
     });
   }
 
@@ -276,7 +276,7 @@ function parseSickwResult(rawResult, serviceMeta, imeiInput) {
       label: 'Sim-Lock (Operador)',
       value: cleanSim,
       status: isUnlocked ? 'ok' : isLocked ? 'fail' : 'warn',
-      summary: isUnlocked ? 'VERDE · Libre de Fábrica' : isLocked ? 'ROJO · Bloqueado de Operador' : cleanSim
+      summary: isUnlocked ? 'Libre de Fábrica' : isLocked ? 'Bloqueado de Operador' : cleanSim
     });
   }
 
@@ -291,7 +291,7 @@ function parseSickwResult(rawResult, serviceMeta, imeiInput) {
       label: 'Reporte Blacklist',
       value: cleanBl,
       status: isClean ? 'ok' : isBad ? 'fail' : 'warn',
-      summary: isClean ? 'VERDE · Sin Reporte (Clean)' : isBad ? 'ROJO · Reportado en Lista Negra' : cleanBl
+      summary: isClean ? 'Sin Reporte (Clean)' : isBad ? 'Reportado en Lista Negra' : cleanBl
     });
   }
 
@@ -306,7 +306,7 @@ function parseSickwResult(rawResult, serviceMeta, imeiInput) {
       label: 'Bloqueo MDM / Knox / Mi',
       value: cleanMdm,
       status: isOff ? 'ok' : isOn ? 'fail' : 'warn',
-      summary: isOff ? 'VERDE · Sin Bloqueo' : 'ROJO · Bloqueo Activo'
+      summary: isOff ? 'Sin Bloqueo' : 'Bloqueo Activo'
     });
   }
 
@@ -355,7 +355,7 @@ function parseSickwResult(rawResult, serviceMeta, imeiInput) {
     const labels = criticalFails.map((c) => `${c.label}: ${c.value}`).join(' · ');
     verdict = {
       status: 'fail',
-      title: `EN ROJO · BLOQUEO ACTIVO (${criticalFails[0].value.toUpperCase()})`,
+      title: `BLOQUEO ACTIVO (${criticalFails[0].value.toUpperCase()})`,
       subtitle: `Atención: ${labels}. No recibir o verificar cuenta antes de comprar.`
     };
   } else if (simFail) {
@@ -368,7 +368,7 @@ function parseSickwResult(rawResult, serviceMeta, imeiInput) {
     const mainOk = okItems.map((c) => `${c.label}: ${c.value}`).join(' · ');
     verdict = {
       status: 'ok',
-      title: `EN VERDE · EQUIPO LIBRE (${okItems[0].value.toUpperCase()})`,
+      title: `EQUIPO LIBRE (${okItems[0].value.toUpperCase()})`,
       subtitle: `Verificado correctamente: ${mainOk}.`
     };
   }
