@@ -9,7 +9,8 @@ COPY docs ./docs
 
 RUN mkdir -p /app/data
 
+ENV DOCKER=true
 ENV PORT=3000
-EXPOSE 3000
+EXPOSE 80 3000
 
 CMD ["node", "server.js"]

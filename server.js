@@ -530,6 +530,13 @@ const server = http.createServer(async (req, res) => {
   }
 });
 
-server.listen(PORT, () => {
-  console.log(`Sickw Store Diagnostic Server running at http://localhost:${PORT}`);
+server.listen(PORT, '0.0.0.0', () => {
+  console.log(`Sickw Store Diagnostic Server running at http://0.0.0.0:${PORT}`);
 });
+
+// In Docker/Easypanel, also listen on port 80 if main PORT is 3000 so Easypanel's default proxy (port 80) works out of the box
+if (process.env.DOCKER === 'true' && PORT !== 80) {
+  http.createServer(server.listeners('request')[0]).listen(80, '0.0.0.0', () => {
+    console.log('Easypanel compatibility listener active on port 80');
+  });
+}
