@@ -93,6 +93,10 @@
   const scannerStatus = document.getElementById('scannerStatus');
   const switchCameraBtn = document.getElementById('switchCameraBtn');
   const photoScanInput = document.getElementById('photoScanInput');
+  const lensSelectorRow = document.getElementById('lensSelectorRow');
+  const zoomControlsRow = document.getElementById('zoomControlsRow');
+  const torchBtn = document.getElementById('torchBtn');
+  let torchEnabled = false;
 
   const openCatalogBtn = document.getElementById('openCatalogBtn');
   const catalogModal = document.getElementById('catalogModal');
@@ -423,15 +427,23 @@
       semaforoSection.hidden = true;
     }
 
-    // Technical Specs Table
+    // Technical Specs Table (with green/red status pills on OFF/ON/Clean/Locked)
     specsGrid.innerHTML = '';
     for (const f of fields) {
       const cell = document.createElement('div');
       cell.className = 'spec-cell';
-      cell.innerHTML = `
-        <span class="spec-key">${escapeHtml(f.key)}</span>
-        <span class="spec-val">${escapeHtml(f.value)}</span>
-      `;
+      const badgeType = f.badge || detectClientBadge(f.key, f.value);
+      if (badgeType) {
+        cell.innerHTML = `
+          <span class="spec-key">${escapeHtml(f.key)}</span>
+          <span class="spec-badge" data-badge="${escapeHtml(badgeType)}">${escapeHtml(f.value)}</span>
+        `;
+      } else {
+        cell.innerHTML = `
+          <span class="spec-key">${escapeHtml(f.key)}</span>
+          <span class="spec-val">${escapeHtml(f.value)}</span>
+        `;
+      }
       specsGrid.appendChild(cell);
     }
 
@@ -570,6 +582,143 @@
     } catch {}
   }
 
+  function detectClientBadge(key, value) {
+    const k = String(key || '').toLowerCase();
+    const v = String(value || '').trim();
+    if (/(find my|icloud lock|mdm|knox|mi activation|mi lock|activation lock)/i.test(k)) {
+      if (/^(off|disabled|none|normal|unlocked|clean)$/i.test(v)) return 'ok';
+      if (/^(on|enabled|active|locked|lost)$/i.test(v)) return 'fail';
+    }
+    if (/(sim-lock|sim lock|unlock status|lock status)/i.test(k)) {
+      if (/(unlocked|unlock|sim-free|free)/i.test(v)) return 'ok';
+      if (/\blocked\b/i.test(v)) return 'fail';
+    }
+    if (/(blacklist|gsma)/i.test(k)) {
+      if (/^clean$/i.test(v)) return 'ok';
+      if (/(blacklisted|stolen|lost|barred|fraud)/i.test(v)) return 'fail';
+    }
+    return null;
+  }
+
+  function chooseBestDefaultCameraIndex(cameras) {
+    // 1. Check if the user already selected a favorite lens on this phone
+    try {
+      const savedId = localStorage.getItem('imei_preferred_camera');
+      if (savedId) {
+        const savedIdx = cameras.findIndex((c) => c.id === savedId);
+        if (savedIdx >= 0) return savedIdx;
+      }
+    } catch {}
+
+    // 2. Filter rear cameras
+    const backIndices = [];
+    cameras.forEach((c, idx) => {
+      if (/back|trasera|posterior|environment|rear/i.test(c.label)) {
+        backIndices.push(idx);
+      }
+    });
+
+    if (backIndices.length === 0) return cameras.length - 1;
+
+    // 3. Avoid Ultra-Wide (0.5x) / Telephoto / Macro / Depth sensors if main camera is available
+    const mainBack = backIndices.filter((idx) => {
+      const lbl = cameras[idx].label.toLowerCase();
+      return !/(ultra|wide-angle|gran angular|0\.5|tele|depth|macro)/i.test(lbl);
+    });
+
+    if (mainBack.length > 0) {
+      // On many Android/Samsung devices, camera2 0 (the first mainBack or last mainBack) is primary;
+      // on iOS, "Back Camera" / "Cámara trasera" is primary.
+      const exactMain = mainBack.find((idx) => /^(back camera|cámara trasera|camera2 0, facing back)$/i.test(cameras[idx].label.trim()));
+      if (exactMain !== undefined) return exactMain;
+      return mainBack[0];
+    }
+
+    return backIndices[0];
+  }
+
+  function renderLensSelectorPills() {
+    if (!camerasList || camerasList.length <= 1) {
+      lensSelectorRow.hidden = true;
+      return;
+    }
+    lensSelectorRow.hidden = false;
+    lensSelectorRow.innerHTML = '<span class="scanner-row-label">Lente (se guarda automático):</span>';
+
+    let savedId = null;
+    try {
+      savedId = localStorage.getItem('imei_preferred_camera');
+    } catch {}
+
+    camerasList.forEach((cam, idx) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = `lens-chip${idx === currentCameraIdx ? ' active' : ''}`;
+      const isBack = /back|trasera|environment|rear/i.test(cam.label);
+      const shortName = isBack ? `Trasera ${idx + 1}` : `Cámara ${idx + 1}`;
+      const star = cam.id === savedId ? ' ★' : '';
+      btn.textContent = `${shortName}${star}`;
+      btn.title = cam.label || shortName;
+      btn.addEventListener('click', async () => {
+        currentCameraIdx = idx;
+        try {
+          localStorage.setItem('imei_preferred_camera', cam.id);
+        } catch {}
+        renderLensSelectorPills();
+        await startCameraStream(cam.id);
+      });
+      lensSelectorRow.appendChild(btn);
+    });
+  }
+
+  async function applyCameraFocusAndZoom(zoomValue = null) {
+    try {
+      const videoEl = document.querySelector('#cameraReader video');
+      if (!videoEl || !videoEl.srcObject) return;
+      const track = videoEl.srcObject.getVideoTracks()[0];
+      if (!track || !track.getCapabilities) return;
+
+      const caps = track.getCapabilities();
+      const advanced = {};
+
+      // Enable continuous autofocus so close-up barcodes focus automatically
+      if (Array.isArray(caps.focusMode) && caps.focusMode.includes('continuous')) {
+        advanced.focusMode = 'continuous';
+      }
+
+      // Show/apply zoom controls if supported or fallback to CSS scale
+      zoomControlsRow.hidden = false;
+      torchBtn.hidden = !caps.torch;
+
+      if (zoomValue !== null) {
+        if (caps.zoom) {
+          const clamped = Math.min(caps.zoom.max, Math.max(caps.zoom.min, zoomValue));
+          advanced.zoom = clamped;
+          videoEl.style.transform = '';
+        } else {
+          // CSS digital zoom fallback for devices without hardware zoom API
+          videoEl.style.transform = zoomValue > 1 ? `scale(${zoomValue})` : '';
+          videoEl.style.transformOrigin = 'center center';
+        }
+      } else if (caps.zoom && caps.zoom.max >= 1.5) {
+        // Default slight 1.5x zoom helps multi-lens phones focus sharply at 15-20cm
+        const defaultZoom = Math.min(caps.zoom.max, Math.max(caps.zoom.min, 1.5));
+        advanced.zoom = defaultZoom;
+        updateActiveZoomChip('1.5');
+      }
+
+      if (Object.keys(advanced).length > 0) {
+        await track.applyConstraints({ advanced: [advanced] });
+      }
+    } catch {}
+  }
+
+  function updateActiveZoomChip(valStr) {
+    document.querySelectorAll('.zoom-chip[data-zoom]').forEach((btn) => {
+      btn.classList.toggle('active', btn.getAttribute('data-zoom') === String(valStr));
+    });
+  }
+
   async function openCameraScanner() {
     scannerModal.hidden = false;
     scannerStatus.textContent = 'Iniciando cámara...';
@@ -586,9 +735,8 @@
         return;
       }
 
-      // Prefer back camera on mobile
-      const backIdx = camerasList.findIndex((c) => /back|trasera|environment/i.test(c.label));
-      currentCameraIdx = backIdx >= 0 ? backIdx : 0;
+      currentCameraIdx = chooseBestDefaultCameraIndex(camerasList);
+      renderLensSelectorPills();
       await startCameraStream(camerasList[currentCameraIdx].id);
     } catch {
       scannerStatus.textContent = 'Permiso de cámara no concedido o sin cámara disponible. Usa "Subir / Tomar Foto".';
@@ -598,14 +746,22 @@
   async function startCameraStream(cameraId) {
     await stopCameraScanner();
     html5QrScanner = new Html5Qrcode('cameraReader');
-    scannerStatus.textContent = 'Apunta al código de barras del IMEI o QR en pantalla...';
+    scannerStatus.textContent = 'Apunta al código de barras (usa Zoom 1.5x o 2x si tu cámara no enfoca de cerca)...';
+    torchEnabled = false;
 
     await html5QrScanner.start(
       cameraId,
-      { fps: 12, qrbox: { width: 260, height: 110 } },
+      {
+        fps: 15,
+        qrbox: { width: 270, height: 105 },
+        aspectRatio: 1.333334
+      },
       (decodedText) => {
         const extracted = extractImeiOrSerialFromText(decodedText);
         if (extracted) {
+          try {
+            localStorage.setItem('imei_preferred_camera', cameraId);
+          } catch {}
           playScanBeep();
           imeiInput.value = extracted;
           updateImeiValidation();
@@ -616,6 +772,8 @@
       },
       () => {}
     );
+
+    setTimeout(() => applyCameraFocusAndZoom(null), 350);
   }
 
   async function stopCameraScanner() {
@@ -834,8 +992,32 @@
   switchCameraBtn.addEventListener('click', async () => {
     if (camerasList.length > 1) {
       currentCameraIdx = (currentCameraIdx + 1) % camerasList.length;
-      await startCameraStream(camerasList[currentCameraIdx].id);
+      const camId = camerasList[currentCameraIdx].id;
+      try {
+        localStorage.setItem('imei_preferred_camera', camId);
+      } catch {}
+      renderLensSelectorPills();
+      await startCameraStream(camId);
     }
+  });
+
+  document.querySelectorAll('.zoom-chip[data-zoom]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const z = parseFloat(btn.getAttribute('data-zoom') || '1');
+      updateActiveZoomChip(btn.getAttribute('data-zoom'));
+      applyCameraFocusAndZoom(z);
+    });
+  });
+
+  torchBtn.addEventListener('click', async () => {
+    try {
+      const videoEl = document.querySelector('#cameraReader video');
+      if (!videoEl || !videoEl.srcObject) return;
+      const track = videoEl.srcObject.getVideoTracks()[0];
+      torchEnabled = !torchEnabled;
+      await track.applyConstraints({ advanced: [{ torch: torchEnabled }] });
+      torchBtn.classList.toggle('active', torchEnabled);
+    } catch {}
   });
 
   openCatalogBtn.addEventListener('click', () => {
