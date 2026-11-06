@@ -719,9 +719,11 @@
     });
   }
 
+  let nativeDetectorTimer = null;
+
   async function openCameraScanner() {
     scannerModal.hidden = false;
-    scannerStatus.textContent = 'Iniciando cámara...';
+    scannerStatus.textContent = 'Activando autoenfoque inteligente HD...';
 
     if (typeof Html5Qrcode === 'undefined') {
       scannerStatus.textContent = 'Usa el botón de abajo para tomar o subir una foto de la caja o pantalla.';
@@ -729,54 +731,147 @@
     }
 
     try {
-      camerasList = await Html5Qrcode.getCameras();
-      if (!camerasList || camerasList.length === 0) {
-        scannerStatus.textContent = 'No se detectó cámara en vivo. Puedes subir o tomar una foto abajo.';
-        return;
-      }
+      // Populate cameras list in background only if user manually wants to switch lens later
+      Html5Qrcode.getCameras()
+        .then((cams) => {
+          camerasList = cams || [];
+          renderLensSelectorPills();
+        })
+        .catch(() => {});
 
-      currentCameraIdx = chooseBestDefaultCameraIndex(camerasList);
-      renderLensSelectorPills();
-      await startCameraStream(camerasList[currentCameraIdx].id);
+      const savedCameraId = (() => {
+        try {
+          return localStorage.getItem('imei_preferred_camera');
+        } catch {
+          return null;
+        }
+      })();
+
+      // Start with saved lens or automatic OS environment camera in Full HD (1920x1080)
+      await startCameraStream(savedCameraId || { facingMode: 'environment' });
     } catch {
       scannerStatus.textContent = 'Permiso de cámara no concedido o sin cámara disponible. Usa "Subir / Tomar Foto".';
     }
   }
 
-  async function startCameraStream(cameraId) {
+  function onBarcodeDetectedSuccess(decodedText, cameraIdToSave) {
+    const extracted = extractImeiOrSerialFromText(decodedText);
+    if (extracted) {
+      if (typeof cameraIdToSave === 'string') {
+        try {
+          localStorage.setItem('imei_preferred_camera', cameraIdToSave);
+        } catch {}
+      }
+      playScanBeep();
+      imeiInput.value = extracted;
+      updateImeiValidation();
+      closeCameraScannerModal();
+      return true;
+    }
+    scannerStatus.textContent = `Leído: ${decodedText} (buscando IMEI de 15 dígitos...)`;
+    return false;
+  }
+
+  function startNativeHardwareBarcodeLoop(videoEl, cameraIdToSave) {
+    if (nativeDetectorTimer) {
+      clearInterval(nativeDetectorTimer);
+      nativeDetectorTimer = null;
+    }
+    if (typeof window.BarcodeDetector === 'undefined') return;
+
+    try {
+      const detector = new window.BarcodeDetector({
+        formats: ['code_128', 'code_39', 'code_93', 'itf', 'qr_code', 'data_matrix']
+      });
+      nativeDetectorTimer = setInterval(async () => {
+        if (!videoEl || videoEl.readyState < 2 || scannerModal.hidden) return;
+        try {
+          const barcodes = await detector.detect(videoEl);
+          if (barcodes && barcodes.length > 0) {
+            // Check all detected barcodes in frame at once (e.g. box label with multiple barcodes)
+            for (const b of barcodes) {
+              if (b.rawValue && onBarcodeDetectedSuccess(b.rawValue, cameraIdToSave)) {
+                return;
+              }
+            }
+          }
+        } catch {}
+      }, 90);
+    } catch {}
+  }
+
+  async function startCameraStream(cameraTarget) {
     await stopCameraScanner();
-    html5QrScanner = new Html5Qrcode('cameraReader');
-    scannerStatus.textContent = 'Apunta al código de barras (usa Zoom 1.5x o 2x si tu cámara no enfoca de cerca)...';
+
+    const formats =
+      typeof Html5QrcodeSupportedFormats !== 'undefined'
+        ? [
+            Html5QrcodeSupportedFormats.CODE_128,
+            Html5QrcodeSupportedFormats.CODE_39,
+            Html5QrcodeSupportedFormats.CODE_93,
+            Html5QrcodeSupportedFormats.ITF,
+            Html5QrcodeSupportedFormats.QR_CODE,
+            Html5QrcodeSupportedFormats.DATA_MATRIX
+          ]
+        : undefined;
+
+    html5QrScanner = new Html5Qrcode('cameraReader', {
+      formatsToSupport: formats,
+      experimentalFeatures: {
+        useBarCodeDetectorIfSupported: true
+      },
+      verbose: false
+    });
+
+    scannerStatus.textContent = 'Apunta a 20 cm de la caja o pantalla (detecta automático sin acercarte tanto)...';
     torchEnabled = false;
 
+    const videoConstraints =
+      typeof cameraTarget === 'string'
+        ? {
+            deviceId: { exact: cameraTarget },
+            width: { ideal: 1920 },
+            height: { ideal: 1080 },
+            focusMode: 'continuous'
+          }
+        : {
+            facingMode: 'environment',
+            width: { ideal: 1920 },
+            height: { ideal: 1080 },
+            focusMode: 'continuous'
+          };
+
     await html5QrScanner.start(
-      cameraId,
+       cameraTarget,
       {
-        fps: 15,
-        qrbox: { width: 270, height: 105 },
-        aspectRatio: 1.333334
+        fps: 20,
+        qrbox: (viewfinderWidth, viewfinderHeight) => {
+          const w = Math.min(Math.floor(viewfinderWidth * 0.88), 380);
+          const h = Math.min(Math.floor(viewfinderHeight * 0.45), 160);
+          return { width: Math.max(w, 220), height: Math.max(h, 95) };
+        },
+        videoConstraints
       },
       (decodedText) => {
-        const extracted = extractImeiOrSerialFromText(decodedText);
-        if (extracted) {
-          try {
-            localStorage.setItem('imei_preferred_camera', cameraId);
-          } catch {}
-          playScanBeep();
-          imeiInput.value = extracted;
-          updateImeiValidation();
-          closeCameraScannerModal();
-        } else {
-          scannerStatus.textContent = `Leído: ${decodedText} (buscando IMEI de 15 dígitos...)`;
-        }
+        onBarcodeDetectedSuccess(decodedText, typeof cameraTarget === 'string' ? cameraTarget : null);
       },
       () => {}
     );
 
-    setTimeout(() => applyCameraFocusAndZoom(null), 350);
+    setTimeout(() => {
+      applyCameraFocusAndZoom(null);
+      const videoEl = document.querySelector('#cameraReader video');
+      if (videoEl) {
+        startNativeHardwareBarcodeLoop(videoEl, typeof cameraTarget === 'string' ? cameraTarget : null);
+      }
+    }, 300);
   }
 
   async function stopCameraScanner() {
+    if (nativeDetectorTimer) {
+      clearInterval(nativeDetectorTimer);
+      nativeDetectorTimer = null;
+    }
     if (html5QrScanner) {
       try {
         if (html5QrScanner.isScanning) {
